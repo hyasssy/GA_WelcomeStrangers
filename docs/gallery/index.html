@@ -1,0 +1,103 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Gallery ｜ 奥山帆夏 / Honoka Okuyama</title>
+  <link rel="icon" type="image/x-icon" href="">
+  <meta name="author" author="Yuto Hayashi">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="../css/plugin/normalize.css">
+  <link rel="stylesheet" href="../css/common-style.css?date=210228">
+  <link rel="stylesheet" href="./gallery_style.css?date=210228">
+  <script type="text/javascript" src="./galleryThumbnail.js?date=210224"></script>
+  <!-- <script type="text/javascript" src="../js/template.js"></script> -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+  <!--AdobeFont読み込み-->
+  <script>
+    (function (d) {
+      var config = {
+        kitId: 'ppa6pip',
+        scriptTimeout: 3000,
+        async: true
+      },
+        h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+    })(document);
+  </script>
+  <!-- FOUTを防ぐため-->
+  <script type="text/javascript">
+    // 50msごとにクラスを取得したかチェックして処理
+    var element = $("html").get(0);
+    var func;
+    var count = 0;
+    func = setInterval(function () {
+      //2500ms以上いったら強制フェードイン
+      if (element.classList.contains("wf-active") || count > 50) {
+        stop();
+      }
+      count++;
+    }, 50);
+    function stop() {
+      clearInterval(func);
+      count = 10;
+      $("html").hide().css({ visibility: "visible" }).fadeIn(600);
+    }
+  </script>
+</head>
+
+<body>
+  <div id="top"></div>
+  <div id="nav-box">
+    <!-- ここのリンク正式版は調整した方がいいかも -->
+    <a href="../index.html">
+      <div id="nav-title">
+        <img src="../imgs/title.svg" alt="おくやまほのか タイトル">
+      </div>
+    </a>
+    <div id="nav-list">
+      <a href="../news/index.html">News</a><br>
+      <a href="#top">Gallery</a><br>
+      <a href="../index.html#cv">CV</a><br>
+      <a href="../index.html#contact">Contact</a>
+    </div>
+  </div>
+  <!-- ここにサムネが溜まっていく。テンプレで重ねて表示を実装していく -->
+  <div id="gallery-wrapper">
+    <div id="gallery-header">Gallery</div>
+    <div id="gallery-headbox"></div>
+    <div id="gallery-shows">
+      <div class="gallery-subtitleline"></div>
+      <div class="gallery-subtitle">shows</div>
+    </div>
+    <div class="gallery-box">
+      <script type="text/javascript">
+        ShowsThumbnails(document.getElementsByClassName("gallery-box")[0]);
+      </script>
+    </div>
+    <div id="gallery-works">
+      <div class="gallery-subtitleline"></div>
+      <div class="gallery-subtitle">works</div>
+    </div>
+    <div class="gallery-box">
+      <script type="text/javascript">
+        WorksThumbnails(document.getElementsByClassName("gallery-box")[1]);
+      </script>
+    </div>
+  </div>
+  </div>
+
+  <div id="shows-modal-target">
+    <script type="text/javascript">
+      ShowsModalWindows(document.getElementById("shows-modal-target"));
+    </script>
+  </div>
+  <div id="works-modal-target">
+    <script type="text/javascript">
+      WorksModalWindows(document.getElementById("works-modal-target"));
+    </script>
+  </div>
+
+  <div id="copyright">©️ 2021 honoka.okuyama.com All Rights Reserved.</div>
+</body>
+
+</html>

@@ -1,0 +1,263 @@
+/*css of Top page*/
+/* .fix {
+  position: fixed;
+  width: 100vw;
+  height: 100%;
+} */
+.bg-slider {
+  margin: 4.6rem 0 0 0.6rem;
+  width: calc(100% - 1.2rem);
+  height: calc(100% - 5.2rem);
+  height: -webkit-fill-available - 0.6rem; /*iosのsafariでメニューバーに隠れてしまう問題解決*/
+  background-position: center center;
+  background-size: cover;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+#top-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  margin-bottom: 5rem;
+  /* background-color: violet; */
+}
+.imageframe-wrapper {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  right: 0rem;
+  /* bottom: 3rem; */
+  align-items: center;
+  /* background-color: rgb(255,0,0,.3); */
+}
+.imageframe {
+  width: calc(100% - 5vw);
+  height: 100%;
+  position: absolute;
+  right: 5vw;
+  bottom: 5vw;
+  display: flex;
+  align-items: flex-end;
+  /* background-color: var(--snowwhite); */
+  /* padding: .5rem; */
+}
+.imageframe img {
+  width: 100%;
+  max-height: 75%;
+  object-fit: cover;
+}
+.img-caption {
+  position: absolute;
+  font-family: mr-eaves-modern, "Yumin", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 200;
+  right: 5vw;
+  bottom: calc(5vw - 1.5rem);
+  text-align: right;
+  /* margin-right: -.5rem; */
+}
+
+#shortintroduction {
+  position: absolute;
+  /* background-color: var(--nightnavy); */
+  font-family: mr-eaves-modern, sans-serif;
+  color: var(--baseblack);
+  font-size: 1.3rem;
+  left: 3vw;
+  bottom: 17.8rem;
+  transform-origin: 0% 100%;
+  transform: rotate(90deg);
+}
+#sns-icons {
+  position: absolute;
+  width: 3.2rem;
+  left: 5.5vw; /*navに合わせて調整*/
+  bottom: 0; /*よう調整*/
+}
+#sns-icons a {
+  display: block;
+  margin-top: 1vh;
+}
+#sns-icons img {
+  width: 100%;
+}
+
+#cv-wrapper {
+  width: 100%;
+  margin-top: 25rem;
+  margin-bottom: 10rem;
+}
+#cv-box {
+  width: 50%;
+  max-width: 60rem;
+  margin-left: 30%;
+  /* background-color: rgb(225,247,85,.57); */
+  background-image: url(../imgs/woodsurface.svg);
+  background-size: cover;
+  box-shadow: 0 0 1px 1px white inset;
+  position: relative;
+}
+#cv-subtitle {
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.3rem;
+  font-family: "Moon";
+  position: absolute;
+  top: -7.2rem;
+  left: -4.6rem;
+}
+#cv-name {
+  font-size: 1.7rem;
+  line-height: 1rem;
+  position: absolute;
+  top: -0.6rem;
+  left: -1.4rem;
+}
+#cv-textbox {
+  font-size: 1.2rem;
+  /* background-color: rgb(255,0,0,.3); */
+  width: 92%;
+  margin-left: 5%;
+  padding-top: 3rem;
+  padding-bottom: 8rem;
+}
+.cv-header {
+  margin-top: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+.cv-line {
+  display: flex;
+  line-height: 1.8rem;
+}
+.cv-year {
+  margin-right: 2rem;
+}
+.cv-description {
+}
+.cv-border {
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+  border-bottom: solid 0.4px var(--nightnavy);
+  opacity: 0.6;
+}
+
+#contact-wrapper {
+  width: 100%;
+  margin-top: 20rem;
+  margin-bottom: 10rem;
+}
+#contact-box {
+  margin-left: 25%;
+  position: relative;
+  font-family: mr-eaves-modern, sans-serif;
+  font-size: 2rem;
+  /* background-color: red; */
+  line-height: 1rem;
+  white-space: nowrap;
+}
+#contact-subtitle {
+  font-size: 4rem;
+  line-height: 4rem;
+  letter-spacing: 0.3rem;
+  font-family: "Moon";
+  position: absolute;
+  top: -7.2rem;
+  left: -4.6rem;
+}
+#contact-box a {
+  display: block;
+  width: 70%;
+  line-height: 2rem;
+  /* background-color: blue; */
+}
+#contact-box a div {
+  display: inline-block;
+  vertical-align: middle;
+}
+#contact-link {
+  /* background-color: red; */
+  border-bottom: solid 1px var(--nightnavy);
+  transition: 0.3s;
+}
+#contact-box a:hover #contact-link {
+  border-bottom: solid 1px var(--bloodyred);
+  /* background-color: red; */
+}
+#contact-icon img {
+  width: 3.2rem;
+  height: auto;
+}
+
+/* .down-arrow img {
+  position: absolute;
+  bottom: -3rem;
+  width: 3.5rem;
+  opacity: 0.9; */
+
+/*上下アニメーション*/
+/* animation-name: float-arrow;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-duration: 0.75s;
+} */
+
+@keyframes float-arrow {
+  /*矢印アニメーション*/
+  0% {
+    transform: translate(0, 0px);
+  }
+  100% {
+    transform: translate(0, 15px);
+  }
+}
+
+@media screen and (max-width: 896px) {
+  /*タブレット以下スマホ以上*/
+}
+@media screen and (max-width: 480px) {
+  /*スマホ*/
+  .imageframe-wrapper {
+    width: 100%;
+  }
+  .imageframe {
+    width: 93vw;
+    left: 3.5vw;
+    bottom: 3.5vw;
+  }
+  .img-caption {
+    bottom: calc(3.5vw - 1.2rem);
+    font-size: 1rem;
+    right: 3.5vw;
+  }
+  #shortintroduction{
+    font-size: 1.1rem;
+    bottom: calc(70vw + 15.6rem) ;
+  }
+  #sns-icons {
+    left: 3rem;
+    bottom: 70vw;
+  }
+  #cv-box, #contact-box{
+    width: 80%;
+    margin-left: 10%;
+  }
+  #cv-subtitle, #contact-subtitle {
+    left: -2.4rem;
+    font-size: 2.7rem;
+  }
+  #cv-name{
+    font-size: 1.5rem;
+  }
+  #cv-textbox{
+    font-size: 1.1rem;
+  }
+  .cv-line{
+    line-height: 1.6rem;
+  }
+  #contact-box{
+    font-size: 1.5rem;
+  }
+}
