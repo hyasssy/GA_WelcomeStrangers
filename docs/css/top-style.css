@@ -23,6 +23,10 @@
   margin-bottom: 5rem;
   /* background-color: violet; */
 }
+#fixed-bg{
+  width: 100%;
+  height: 100%;
+}
 .imageframe-wrapper {
   width: 80%;
   height: 100%;
