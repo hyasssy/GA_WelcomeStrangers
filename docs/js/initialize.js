@@ -31,15 +31,11 @@ func = setInterval(function () {
 function stop() {
     clearInterval(func);
     count = 10;
-    $("html").hide().css({ visibility: "visible" }).fadeIn(1200);
+    $("body").hide().css({ visibility: "visible" }).fadeIn(1800);
 }
 
 
 // コピーライトのテンプレート
-function copyright() {
-    var html = "";
-    html += '<div class="copyright">';
-    html += '<span>©️ 2021, Honoka Okuyama</span>';
-    html += '</div>';
-    document.write(html);
-}
+$(function () {
+    $("#copyright").text("©️ 2021 TUA. GA. All Rights Reserved.");
+});

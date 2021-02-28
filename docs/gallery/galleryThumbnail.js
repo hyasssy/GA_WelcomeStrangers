@@ -1,4 +1,4 @@
-window.onload = function () {
+$(document).ready(function () {
     // var scrollPosition;
     $('.js-modal-open').each(function () {
         $(this).on('click', function () {
@@ -18,7 +18,7 @@ window.onload = function () {
         $('.js-modal').fadeOut();
         return false;
     });
-}
+});
 
 //データオブジェクト
 let _data = {
