@@ -21,7 +21,7 @@ body {
   height: 100%;
   opacity: 0;
   /* filter: hue-rotate(30deg); */
-  transition: 5s;
+  transition: 4s;
 }
 #researve-box {
   position: fixed;
@@ -162,12 +162,12 @@ body {
 }
 /* #content2-box は上*/
 .subtitle {
-  font-size: 6vw;
+  font-size: 7vw;
   margin-bottom: 3rem;
   font-weight: 200;
 }
 .list {
-  font-size: 3vw;
+  font-size: 3.2vw;
   line-height: 5vw;
   margin-bottom: 3rem;
 }
@@ -175,7 +175,7 @@ body {
   height: 10rem;
 }
 .text {
-  font-size: 3vw;
+  font-size: 3.2vw;
   line-height: 5vw;
   margin-bottom: 3rem;
   width: 92%;
@@ -217,7 +217,7 @@ body {
 }*/
 
 @media screen and (min-width: 480px) {
-  /*スマホ以上*/
+  /*スマホより大きい*/
   .subtitle {
     font-size: 4rem;
   }
@@ -231,5 +231,9 @@ body {
   }
 }
 @media screen and (min-width: 896px) {
-  /*タブレット以上*/
+  /*タブレットより大きい*/
+  #info-box,
+  #content2-box {
+    margin-right: 18%;
+  }
 }

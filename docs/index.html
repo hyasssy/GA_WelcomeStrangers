@@ -138,7 +138,7 @@
     topbox.onscroll = function () {
       var scrollTop = topbox.scrollTop;
       console.log("scrolltop=" + scrollTop + "innerheight=" + window.innerHeight);
-      if (scrollTop > window.innerHeight) {
+      if (scrollTop * 2 > window.innerHeight) {
         $('#bgfilter').css("opacity", "1");
       } else {
         $('#bgfilter').css("opacity", "0");

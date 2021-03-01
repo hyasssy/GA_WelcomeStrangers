@@ -119,8 +119,11 @@ a:active {
 @media only screen and (orientation: portrait) {
 }
 @media screen and (min-width: 480px) {
-  /*タブレット以下スマホ以上*/
+  /*スマホより大きい*/
+  #copyright {
+    font-size: 1.2rem;
+  }
 }
 @media screen and (min-width: 896px) {
-  /*PC*/
+  /*タブレットより大きい*/
 }
