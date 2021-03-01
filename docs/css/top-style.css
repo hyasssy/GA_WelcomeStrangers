@@ -1,8 +1,8 @@
 /*css of Top page*/
-body{
+body {
   overflow: hidden;
 }
-#top{
+#top {
   width: 100%;
   height: 100%;
   background-image: url(../imgs/top/main_yoko.jpg);
@@ -12,35 +12,40 @@ body{
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-#bgfilter{
+#bgfilter {
   position: fixed;
   background-image: url("../imgs/top/sand-filter.jpg");
-  background-color: red;
+  background-size: cover;
+  /* background-color: red; */
   width: 100%;
   height: 100%;
   opacity: 0;
   /* filter: hue-rotate(30deg); */
-  transition: .5s;
+  transition: 5s;
 }
-#researve-box{
+#researve-box {
   position: fixed;
   width: 30%;
   max-width: 16rem;
   height: 3rem;
-  left: 60%;
+  right: 10%;
   top: 15%;
   z-index: 99;
 }
+#researve-box a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
 
-
-#rightarrow{
+#rightarrow {
   display: inline-block;
   vertical-align: middle;
   width: 15%;
   height: 100%;
   position: relative;
 }
-#rightarrow img{
+#rightarrow img {
   width: 100%;
   height: 100%;
   position: absolute;
@@ -63,18 +68,34 @@ body{
     transform: translate(12px, 0);
   }
 }
-#doresearve{
+#doresearve {
   display: inline-block;
   vertical-align: middle;
   width: 80%;
 }
+#sns-button {
+  position: fixed;
+  width: 10%;
+  max-width: 3.5rem;
+  height: 3rem;
+  right: 10%;
+  top: 23%;
+  z-index: 99;
+}
+#sns-button a {
+  display: block;
+  margin-bottom: 0.7rem;
+}
+#sns-button a img {
+  width: 100%;
+}
 
-#content1{
+#content1 {
   width: 100%;
   height: 100%;
   position: relative;
 }
-#title{
+#title {
   /* background-color: rgb(255, 0, 0, 0.2); */
   top: 0.5vw;
   left: 0.5vw;
@@ -83,73 +104,94 @@ body{
   max-width: calc(100% - 0.5vw);
   fill: var(--titleblack);
 }
-#info-wrapper{
+#info-wrapper {
   position: absolute;
   bottom: 0.5vw;
-  width:100%;
+  width: 100%;
   text-align: right;
 }
-#info-box, #content2-box{
+#info-box,
+#content2-box {
   display: inline-block;
   width: 80%;
   max-width: 50rem;
   text-align: left;
 }
-#downarrow{
+#downarrow {
   width: 6%;
   max-width: 3.2rem;
   position: relative;
 }
-#downarrow img{
+#downarrow img {
   width: 100%;
   position: absolute;
   top: -5rem;
-  /* animation-name: float-vertical; */
+  animation-name: float-vertical;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  animation-duration: 0.6s;
+  animation-duration: 0.8s;
 }
 @keyframes float-vertical {
   0% {
-    transform: translate(0,0px);
+    transform: translate(0, 0px);
   }
   60% {
-    transform: translate(0,0px);
+    transform: translate(0, 0px);
   }
   100% {
-    transform: translate(0,12px);
+    transform: translate(0, 12px);
   }
 }
-#topinfo{
-
+#topinfo {
 }
-#topinfo img{
+#topinfo img {
   width: 100%;
 }
-#content2{
+#content2 {
   position: relative;
   width: 100%;
   text-align: right;
-  margin-top: 20rem;
-  margin-bottom: 12rem;
+  padding-top: 20rem;
+  padding-bottom: 12rem;
   /* background-color: red; */
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
   color: var(--baseblack);
+  color: var(--basewhite);
   font-weight: 400;
 }
-.subtitle{
-  font-size: 3rem;
+/* #content2-box は上*/
+.subtitle {
+  font-size: 6vw;
+  margin-bottom: 3rem;
+  font-weight: 200;
 }
-.list{
-  font-size: 1.6rem;
-  line-height: 2.5rem;
+.list {
+  font-size: 3vw;
+  line-height: 5vw;
+  margin-bottom: 3rem;
 }
-#copyright{
+.null-space {
+  height: 10rem;
+}
+.text {
+  font-size: 3vw;
+  line-height: 5vw;
+  margin-bottom: 3rem;
+  width: 92%;
+  max-width: 40rem;
+  text-align: justify;
+}
+.text-border {
+  border-top: solid 1px var(--basewhite);
+  margin-bottom: 3rem;
+  width: 40%;
+  max-width: 30rem;
+}
+
+#copyright {
   position: relative;
 }
-
-
 
 /* .down-arrow img {
   position: absolute;
@@ -174,9 +216,20 @@ body{
   }
 }*/
 
-@media screen and (max-width: 896px) {
-  /*タブレット以下スマホ以上*/
+@media screen and (min-width: 480px) {
+  /*スマホ以上*/
+  .subtitle {
+    font-size: 4rem;
+  }
+  .list {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+  }
+  .text {
+    font-size: 1.5rem;
+    line-height: 2.6rem;
+  }
 }
-@media screen and (max-width: 480px) {
-  /*スマホ*/
+@media screen and (min-width: 896px) {
+  /*タブレット以上*/
 }
