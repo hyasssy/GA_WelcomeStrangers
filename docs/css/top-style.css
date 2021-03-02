@@ -14,7 +14,7 @@ body {
 }
 #bgfilter {
   position: fixed;
-  background-image: url("../imgs/top/sand-filter1.jpg");
+  background-image: url("../imgs/top/sand-filter.jpg");
   background-size: cover;
   /* background-color: red; */
   width: 100%;
@@ -216,7 +216,7 @@ body {
   /* background-color: red; */
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
   /* color: var(--baseblack); */
-  color: var(--titleblack);
+  color: var(--basewhite);
   font-weight: 400;
 }
 #content2-box {
