@@ -1,8 +1,5 @@
 /*共通CSS 最初に読み込む。Mobile First Design*/
-@font-face {
-  font-family: "Moon";
-  src: url(../fonts/MoonLight.otf);
-}
+
 @font-face {
   font-family: "HelveticaNeue";
   src: url(../fonts/HelveticaNeue-Thin.ttf);
@@ -13,17 +10,17 @@
   src: url(../fonts/HelveticaNeue.ttf);
   font-weight: 400;
 }
-@font-face {
+/* @font-face {
   font-family: "HiraKakuGo";
   src: url(../fonts/HiraKakuGo_W1.ttc);
-  font-weight: 200;
+  font-weight: 100;
 }
 @font-face {
   font-family: "HiraKakuGo";
   src: url(../fonts/HiraKakuGo_W3.ttc);
   font-weight: 300;
-}
-@font-face {
+} */
+/* @font-face {
   font-family: "Yumin";
   src: url(../fonts/YUMINL.TTF);
   font-weight: 300;
@@ -42,7 +39,7 @@
   font-family: "KozGo";
   src: url(../fonts/KozGo-Regular.otf);
   font-weight: 400;
-}
+} */
 /*adobeフォント参考
 a-otf-gothic-bbb-pr6n : 400
 */
@@ -104,16 +101,16 @@ a:active {
   /* background-color: red; */
   padding-top: 7rem;
   padding-bottom: 7rem;
-  width: 90%;
-  margin-left: 5%;
+  width:80%;
+  margin-left: 10%;
   text-align: center;
   font-family: "HelveticaNeue", sans-serif;
   font-size: 1rem;
   letter-spacing: 1px;
   font-weight: 300;
-  color: var(--baseblack);
+  color: var(--basewhite);
   z-index: 99;
-  border-top: solid 1px var(--neutralgray);
+  border-top: solid 1px var(--basewhite);
 }
 
 @media only screen and (orientation: portrait) {

@@ -1,14 +1,13 @@
 制作メモ
 
 ▼次にやること
+・ナビゲーションの見た目設定
+・Webコンテンツ-coming soon
+・英語切り替え
+・画像切り替え蜃気楼
+・タイトルアニメなど
 
 ▼参考
-・高田冬彦
-http://fuyuhikotakata.com/works/Dream%20Catcher
-・屋上
-https://okujoh.space/
-・Vacances
-https://euskeoiwa.com/2020vacances/
 ・ SANKOU:動き・エフェクト・アニメーション
 https://sankoudesign.com/category/motion-effect/
 
