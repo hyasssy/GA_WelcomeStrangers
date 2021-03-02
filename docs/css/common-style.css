@@ -53,6 +53,7 @@ a-otf-gothic-bbb-pr6n : 400
   --baselink: rgb(66, 115, 223);
   --basehover: rgb(143, 183, 193);
   --basebeige: rgb(245, 224, 194);
+  --lemonyellow: rgba(255, 247, 0, 0.927);
 }
 body,
 html {
@@ -101,7 +102,7 @@ a:active {
   /* background-color: red; */
   padding-top: 7rem;
   padding-bottom: 7rem;
-  width:80%;
+  width: 80%;
   margin-left: 10%;
   text-align: center;
   font-family: "HelveticaNeue", sans-serif;
