@@ -256,7 +256,7 @@ h1 span {
   text-align: justify;
 }
 .text-border {
-  border-top: solid 1px var(--titleblack);
+  border-top: solid 1px var(--basewhite);
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 40%;
