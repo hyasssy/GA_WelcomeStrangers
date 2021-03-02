@@ -14,7 +14,7 @@ body {
 }
 #bgfilter {
   position: fixed;
-  background-image: url("../imgs/top/sand-filter.jpg");
+  background-image: url("../imgs/top/sand-filter1.jpg");
   background-size: cover;
   /* background-color: red; */
   width: 100%;
@@ -29,7 +29,7 @@ body {
   right: 11rem;
   top: 10%;
   z-index: 99;
-  background-color: rgba(255, 0, 0, 0.3);
+  /* background-color: rgba(255, 0, 0, 0.3); */
 }
 #researve-box {
   width: 11rem;
@@ -215,8 +215,8 @@ body {
   padding-bottom: 12rem;
   /* background-color: red; */
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
-  color: var(--baseblack);
-  color: var(--basewhite);
+  /* color: var(--baseblack); */
+  color: var(--titleblack);
   font-weight: 400;
 }
 #content2-box {
@@ -256,7 +256,7 @@ h1 span {
   text-align: justify;
 }
 .text-border {
-  border-top: solid 1px var(--basewhite);
+  border-top: solid 1px var(--titleblack);
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 40%;
