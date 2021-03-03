@@ -152,7 +152,7 @@ body {
   /* background-color: red; */
   z-index: 1;
 }
-#title {
+.title {
   /* background-color: rgb(255, 0, 0, 0.2); */
   top: 0.5vw;
   left: 0.5vw;
@@ -161,6 +161,7 @@ body {
   max-width: calc(100% - 0.5vw);
   fill: var(--titleblack);
   transition: 1s;
+  display: block;
 }
 #info-wrapper {
   position: absolute;
@@ -239,6 +240,7 @@ h1 span {
 .subtitle {
   font-size: 7vw;
   margin-bottom: 3rem;
+  letter-spacing: 0.2vw;
   font-weight: 200;
 }
 .list {
@@ -276,10 +278,13 @@ h1 span {
 }
 #logo-box {
   width: 100%;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 }
 #logo-box img {
   margin-top: 3rem;
-  display: block;
+  margin-right: 1rem;
+  display: inline-block;
   height: 7vh;
   /* background-color: red; */
 }
@@ -311,6 +316,14 @@ h1 span {
   }
 }*/
 
+
+@media only screen and (orientation: landscape) {
+  /*横長*/
+  /* .title{
+    width: 35% !important;
+    height: auto !important;
+  } */
+}
 @media screen and (min-width: 480px) {
   /*スマホより大きい*/
 
@@ -325,7 +338,7 @@ h1 span {
     top: 15%;
   }
 
-  #title {
+  .title {
     height: 100%;
     width: auto;
     /* background-color: rebeccapurple; */

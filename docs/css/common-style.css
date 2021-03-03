@@ -114,8 +114,20 @@ a:active {
   border-top: solid 1px var(--basewhite);
 }
 
-@media only screen and (orientation: portrait) {
+.portrait{
+  display: block !important;
 }
+.landscape{
+  display: none !important;
+}
+/* @media only screen and (orientation: landscape) {
+  .portrait{
+    display: none !important;
+  }
+  .landscape{
+    display: block !important;
+  }
+} */
 @media screen and (min-width: 480px) {
   /*スマホより大きい*/
   #copyright {
@@ -124,4 +136,5 @@ a:active {
 }
 @media screen and (min-width: 896px) {
   /*タブレットより大きい*/
+
 }
