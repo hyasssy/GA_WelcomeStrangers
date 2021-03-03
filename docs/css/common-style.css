@@ -114,12 +114,12 @@ a:active {
   border-top: solid 1px var(--basewhite);
 }
 
-.portrait{
+/* .portrait{
   display: block !important;
 }
 .landscape{
   display: none !important;
-}
+} */
 /* @media only screen and (orientation: landscape) {
   .portrait{
     display: none !important;
