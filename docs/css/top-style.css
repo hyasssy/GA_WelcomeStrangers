@@ -257,13 +257,13 @@ h1 span {
   /* width: 92%; */
   text-align: justify;
 }
-.text-border {
+/* .text-border {
   border-top: solid 1px var(--basewhite);
   margin-top: 3rem;
   margin-bottom: 3rem;
   width: 40%;
   max-width: 30rem;
-}
+} */
 .map {
   position: relative;
   width: 100%;
@@ -280,13 +280,14 @@ h1 span {
   width: 100%;
   margin-top: 5rem;
   margin-bottom: 5rem;
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
 }
 #logo-box img {
   margin-top: 3rem;
-  margin-right: 1rem;
   display: inline-block;
-  height: 7vh;
-  /* background-color: red; */
+  height: 3.6rem;
 }
 
 #copyright {
@@ -315,7 +316,6 @@ h1 span {
     transform: translate(0, 15px);
   }
 }*/
-
 
 @media only screen and (orientation: landscape) {
   /*横長*/
@@ -356,6 +356,9 @@ h1 span {
   }
   h1 {
     font-size: 4.2rem;
+  }
+  #logo-box img {
+    height: 4rem;
   }
 }
 @media screen and (min-width: 896px) {
