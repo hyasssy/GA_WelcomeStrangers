@@ -83,6 +83,8 @@ const _data = {
     // },
 }
 $(function (){
+    document.cookie = `lang=${language}`;
+    console.log(document.cookie);
     Object.keys(_data).forEach(function(key){
         document.getElementById(key).innerHTML =  ht_str(language == "ja" ? _data[key].ja : _data[key].en);
     })
