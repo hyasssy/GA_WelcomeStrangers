@@ -10,6 +10,16 @@
   src: url(../fonts/HelveticaNeue.ttf);
   font-weight: 400;
 }
+@font-face {
+  font-family: "TimesNR";
+  src: url(../fonts/TimesNewRomanItalic.ttf);
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face{
+  font-family: "Moon";
+  src: url(../fonts/Moon2.0-Light.otf);
+}
 /* @font-face {
   font-family: "HiraKakuGo";
   src: url(../fonts/HiraKakuGo_W1.ttc);
@@ -22,20 +32,20 @@
 } */
 /* @font-face {
   font-family: "Yumin";
-  src: url(../fonts/YUMINL.TTF);
+  src: url(../fonts/Yumin_Light_subset.ttf);
   font-weight: 300;
-}
-@font-face {
+} */
+/* @font-face {
   font-family: "KozGo";
   src: url(../fonts/KozGo-Bold.otf);
   font-weight: 700;
-}
-@font-face {
+} */
+/* @font-face {
   font-family: "KozGo";
   src: url(../fonts/KozGo-Medium.otf);
   font-weight: 500;
-}
-@font-face {
+} */
+/* @font-face {
   font-family: "KozGo";
   src: url(../fonts/KozGo-Regular.otf);
   font-weight: 400;
@@ -54,6 +64,8 @@ a-otf-gothic-bbb-pr6n : 400
   --basehover: rgb(143, 183, 193);
   --basebeige: rgb(245, 224, 194);
   --lemonyellow: rgba(255, 247, 0, 0.927);
+  --bgcolor: rgba(154, 147, 132, 1);
+  --bgcolor-base: rgba(154, 147, 132, 0);
 }
 body,
 html {
@@ -75,16 +87,17 @@ html {
 }
 ::-webkit-scrollbar {
   width: 0.5rem;
+  background-color: var(--bgcolor);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--neutralgray);
+  background: var(--titleblack);
   border-radius: 1rem;
 }
 
 /*カラースキームは調整*/
 a {
   text-decoration: none;
-  transition: 0.4s;
+  transition: 0.3s;
   color: var(--baselink);
   /* cursor: url(../imgs/icon/pointer.png), pointer; */
 }
@@ -96,6 +109,7 @@ a:hover,
 a:active {
   color: var(--basehover);
   transform: scale(1.1, 1.1);
+  opacity: .6;
 }
 
 #copyright {

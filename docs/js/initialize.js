@@ -1,11 +1,5 @@
 //初期セットアップ
 
-// ページ内リンクのみ取得
-var scroll = new SmoothScroll('a[href*="#"]', {
-    speed: 500,//スクロールする速さ
-    header: '#nav-box',//固定ヘッダーがある場合
-});
-
 //AdobeFont読み込み
 (function (d) {
     var config = {

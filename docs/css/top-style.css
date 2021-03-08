@@ -17,7 +17,7 @@ body {
   background-image: url("../imgs/top/sand-filter.jpg");
   background-size: cover;
   /* background-color: red; */
-  width: 100%;
+  width: calc(100% - 0.5rem);
   height: 100%;
   opacity: 0;
   /* filter: hue-rotate(30deg); */
@@ -30,6 +30,14 @@ body {
   top: 10%;
   z-index: 99;
   /* background-color: rgba(255, 0, 0, 0.3); */
+}
+#ja-button{
+  display: none;
+  font-size: 3rem;
+}
+#en-button{
+  display: block;
+  font-size: 3rem;
 }
 #researve-box {
   width: 11rem;
@@ -208,61 +216,74 @@ body {
 #topinfo img {
   width: 100%;
 }
-#content2 {
+#content2, #content3, #content4 {
+  /* color: var(--baseblack); */
+  /* margin-top: 12rem; */
+  /* background-color: var(--bgcolor-base); */
+  background-color: var(--bgcolor);
+  transition: 4s;
   position: relative;
   width: 100%;
   text-align: center;
-  padding-top: 12rem;
-  padding-bottom: 12rem;
-  /* background-color: red; */
-  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
-  transform: scale(0.95, 1);
-  /* color: var(--baseblack); */
-  color: var(--basewhite);
-  font-weight: 400;
+  padding: 3rem 0;
 }
-#content2-box {
+/*あとでここは分ける必要がある。*/
+.content-box {
   display: inline-block;
-  width: 80%;
-  max-width: 50rem;
+  width: 83%;
+  max-width: 65rem;
   text-align: left;
-  /* background-color: blue; */
+  transform: scale(0.95, 1);
+  color: var(--basewhite);
+  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
+  font-weight: 400;
+  /* box-shadow: 0 0 3rem 3rem var(--bgcolor-base); */
+
 }
 h1 {
-  font-family: "HelveticaNeue", sans-serif;
+  font-family: 'Times New Roman', Times, "HelveticaNeue", sans-serif;
   font-weight: 200;
   font-style: italic;
-  font-size: 8vw;
+  letter-spacing: 0.1vw;
+  font-size: 10vw;
+  margin-bottom: 5rem;
 }
 h1 span {
   display: inline-block;
   white-space: nowrap;
 }
 .subtitle {
-  font-size: 7vw;
+  font-family: "Moon", sans-serif;
+  font-style: italic;
+  font-size: 8vw;
   margin-bottom: 3rem;
   letter-spacing: 0.2vw;
-  font-weight: 200;
+  font-weight: 300;
 }
 .list {
-  font-size: 3.6vw;
+  font-size: 3.8vw;
   line-height: 6vw;
   letter-spacing: 0.5px;
+  /* transform: scale(0.95, 1); */
 }
 .null-space {
   height: 10rem;
+  position: relative;
+  /* background-color: red; */
 }
 .text {
   font-size: 3.4vw;
-  line-height: 5vw;
+  line-height: 5.6vw;
   letter-spacing: 0;
   text-align: justify;
+  /* transform: scale(0.95, 1); */
 }
 .note {
   font-size: 3.2vw;
   line-height: 4.6vw;
   letter-spacing: 0;
   text-align: justify;
+  /* transform: scale(0.95, 1); */
 }
 /* .text-border {
   border-top: solid 1px var(--basewhite);
@@ -283,6 +304,48 @@ h1 span {
   filter: hue-rotate(20deg) invert(10%);
   -webkit-filter: hue-rotate(20deg) invert(10%);
 }
+
+/*モーダルウィンドウ関連*/
+#modal-target{
+  position: relative;
+}
+.modal {
+  display: none;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999; /*ナビよりも上*/
+  overflow: hidden;
+}
+.modal-bg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  background: rgba(47, 53, 57, 0.6);
+  height: 100vh;
+  width: 100%;
+}
+.modal-content {
+  background-color: #fff;
+  left: 10%;
+  position: relative;
+  top: 10%;
+  width: 80%;
+  height: 80%;
+  max-height: 90vh;
+  overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
+}
+.js-modal-open{
+  display: inline-block;
+  /* background-color: red; */
+}
+
+
+
 #logo-box {
   width: 100%;
   margin-top: 5rem;
@@ -291,10 +354,13 @@ h1 span {
   display: flex;
   justify-content: space-between;
 }
-#logo-box img {
-  margin-top: 3rem;
+#logo-box a {
+  /* margin-top: 3rem; */
   display: inline-block;
   height: 3.6rem;
+}
+#logo-box a img{
+  height: 100%;
 }
 
 #copyright {
@@ -354,8 +420,8 @@ h1 span {
     font-size: 4rem;
   }
   .list {
-    font-size: 1.5rem;
-    line-height: 2.6rem;
+    font-size: 1.7rem;
+    line-height: 2.8rem;
   }
   .text {
     font-size: 1.4rem;
@@ -368,8 +434,12 @@ h1 span {
   h1 {
     font-size: 4.2rem;
   }
-  #logo-box img {
+  #logo-box{
+    justify-content: left;
+  }
+  #logo-box a {
     height: 4rem;
+    margin-right: 5rem;
   }
 }
 @media screen and (min-width: 896px) {
