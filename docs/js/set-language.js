@@ -1,4 +1,4 @@
-let language = (window.navigator.languages && window.navigator.languages[0]) ||
+let defaultLanguage = (window.navigator.languages && window.navigator.languages[0]) ||
         window.navigator.language ||
         window.navigator.userLanguage ||
         window.navigator.browserLanguage;
@@ -51,6 +51,7 @@ const _data = {
     },
     text_infolist2:{
         ja: `*新型コロナウイルス感染拡大防止のため日時指定オンライン事前予約制です。右上ボタンから予約サイトにリンクします。
+        
         `,
         en: ``
     },
@@ -82,11 +83,14 @@ const _data = {
     //     en: ``
     // },
 }
+let currentLang;
 $(function (){
-    document.cookie = `lang=${language}`;
+    //あとでボタンで切り替えできるようにする。
+    currentLang = defaultLanguage;
+    document.cookie = `lang=${defaultLanguage}`;//ローカルでは確認できなかった。サーバー上げたら確認できる。
     console.log(document.cookie);
     Object.keys(_data).forEach(function(key){
-        document.getElementById(key).innerHTML =  ht_str(language == "ja" ? _data[key].ja : _data[key].en);
+        document.getElementById(key).innerHTML =  ht_str(currentLang == "ja" ? _data[key].ja : _data[key].en);
     })
 });
 function ht_str( str )

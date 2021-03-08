@@ -216,6 +216,7 @@ body {
   padding-bottom: 12rem;
   /* background-color: red; */
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
+  transform: scale(0.95, 1);
   /* color: var(--baseblack); */
   color: var(--basewhite);
   font-weight: 400;
@@ -246,15 +247,21 @@ h1 span {
 .list {
   font-size: 3.6vw;
   line-height: 6vw;
+  letter-spacing: 0.5px;
 }
 .null-space {
   height: 10rem;
 }
 .text {
-  font-size: 3.2vw;
+  font-size: 3.4vw;
   line-height: 5vw;
   letter-spacing: 0;
-  /* width: 92%; */
+  text-align: justify;
+}
+.note {
+  font-size: 3.2vw;
+  line-height: 4.6vw;
+  letter-spacing: 0;
   text-align: justify;
 }
 /* .text-border {
@@ -351,8 +358,12 @@ h1 span {
     line-height: 2.6rem;
   }
   .text {
-    font-size: 1.5rem;
-    line-height: 2.6rem;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+  .note {
+    font-size: 1.2rem;
+    line-height: 2.1rem;
   }
   h1 {
     font-size: 4.2rem;
