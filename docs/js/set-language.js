@@ -24,28 +24,28 @@ const _topdata = {
 
         This exhibition is planned and organized by the students of the Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, as a part of the class of Arts Studies and Curatorial Practices Seminar: Curation I, under the supervision of Professor Yuko Hasegawa.`
     },
-    text_artistslist: {
-        ja: `遠藤薫
-        藤井光
-        シルパ・グプタ
-        鎌田友介
-        アーシャ・マラクリナ
-        門馬美喜
-        イルーヤン・モンテネグロ
-        スプツニ子!
-        蔡佳葳
-        横山奈美`,
-        en: `Kaori Endo
-        Hikaru Fujii
-        Shilpa Gupta
-        Yusuke Kamata
-        Asya Marakulina
-        Miki Momma
-        Yllang Montenegro
-        Sputniko!
-        Charwei Tsai
-        Nami Yokoyama`
-    },
+    // text_artistslist: {
+    //     ja: `遠藤薫
+    //     藤井光
+    //     シルパ・グプタ
+    //     鎌田友介
+    //     アーシャ・マラクリナ
+    //     門馬美喜
+    //     イルーヤン・モンテネグロ
+    //     スプツニ子!
+    //     蔡佳葳
+    //     横山奈美`,
+    //     en: `Kaori Endo
+    //     Hikaru Fujii
+    //     Shilpa Gupta
+    //     Yusuke Kamata
+    //     Asya Marakulina
+    //     Miki Momma
+    //     Yllang Montenegro
+    //     Sputniko!
+    //     Charwei Tsai
+    //     Nami Yokoyama`
+    // },
     text_infolist1: {
         ja: `会期：2021/3/20th Sat. - 4/7th Wed.（月曜休館）
         時間：10:00 - 18:00（入場は閉館の30分前まで）
