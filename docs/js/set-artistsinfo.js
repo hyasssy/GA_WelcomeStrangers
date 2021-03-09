@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    artist_thumbnail("thumbnail-target");
+    artist_modalwindow("modal-target");
     $('.js-modal-open').each(function () {
         $(this).on('click', function () {
             var target = $(this).data('target');
@@ -21,7 +23,7 @@ let _artistdata = [
     {
         id: "artist1",
         // flag: false,
-        img_portrait: "../imgs/artists/portrait/shilpa.jpg",
+        img_portrait: "./imgs/artists/portrait/shilpa.jpg",
         img_work: ["", "", ""],
         text_id: "artist1_text",
         text: { ja: "アーティスト1", en: "artist1" },

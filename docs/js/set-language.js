@@ -1,9 +1,9 @@
-let defaultLang = (window.navigator.languages && window.navigator.languages[0]) ||
+var defaultLang = (window.navigator.languages && window.navigator.languages[0]) ||
     window.navigator.language ||
     window.navigator.userLanguage ||
     window.navigator.browserLanguage;
 
-const _data = {
+const _topdata = {
     // img_doreserve:{
     //     ja: "",
     //     en: ""
@@ -109,12 +109,16 @@ const _data = {
     //     en: ``
     // },
 }
-let currentLang;
+var currentLang;
 $(function () {
     currentLang = defaultLang;
     //あとでボタンで切り替えできるようにする。
-    document.cookie = `lang=${currentLang}`;//ローカルでは確認できなかった。サーバー上げたら確認できる。
-    console.log(document.cookie);
+    var cookie_lang = $.cookie('lang');
+    if (cookie_lang) {
+        currentLang = cookie_lang;
+    }
+    //ローカルでは確認できなかった。サーバー上げたら確認できる。
+    console.log("読み込み時のcookie : " + document.cookie);
     setlang();
     $('#ja-button').on('click', function () {
         $('#ja-button').fadeOut();
@@ -133,12 +137,14 @@ $(function () {
 
 function setlang() {
     console.log("translate" + currentLang);
-    Object.keys(_data).forEach(function (key) {
+    Object.keys(_topdata).forEach(function (key) {
         var target = document.getElementById(key);
         if (target != null) {
-            target.innerHTML = ht_str(currentLang == "ja" ? _data[key].ja : _data[key].en);
+            target.innerHTML = ht_str(currentLang == "ja" ? _topdata[key].ja : _topdata[key].en);
         }
     });
+    $.cookie('lang', currentLang);
+    console.log("cookie : " + document.cookie);
 }
 
 function button_en() {

@@ -26,19 +26,27 @@
   <link rel="stylesheet" type="text/css" href="css/top-style.css?date=210303">
   <style id="foo" type="text/css"></style>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
 
   <!-- スムーズスクロール -->
-  <script type="text/javascript" src="js/initialize.js?date=210302"></script>
-  <script type="text/javascript" src="js/set-language.js"></script>
-  <script type="text/javascript" src="js/set-artistsinfo.js"></script>
+  <script type="text/javascript" src="js/initialize.js?date=210302" defer></script>
+  <script type="text/javascript" src="js/set-language.js" defer></script>
+  <script type="text/javascript" src="js/set-artistsinfo.js" defer></script>
+  <script type="text/javascript" src="js/anim.js" defer></script>
 
 </head>
 
 <body>
   <div id="top">
+    <div id="bgeffect"></div>
     <div id="bgfilter"></div>
+    <!-- <canvas style="background-image: url('./imgs/top/main_yoko.jpg');"></canvas> -->
     <div id="navigation-wrapper">
-      <div><a id="ja-button">JAPANESE</a><a id="en-button">ENGLISH</a></div>
+      <div id="langbutton-wrapper">
+        <a id="ja-button">JAPANESE</a>
+        <a id="en-button">ENGLISH</a>
+        <div class="nav-border"></div>
+      </div>
       <div id="researve-box">
         <a href="https://peatix.com/event/1837670/view" target="_blank">
           <div id="rightarrow"><img src="./imgs/top/rightarrow.svg" alt="右向きトライアングル"></div>
@@ -128,9 +136,6 @@
         <div class="list" id="text_artistslist">
         </div>
         <div id="thumbnail-target">
-          <script>
-            artist_thumbnail("thumbnail-target");
-          </script>
         </div>
         <!-- <a class="js-modal-open" data-target="artist1">asdfasdfa</a> -->
         <div class="null-space"></div>
@@ -155,9 +160,6 @@
     </div>
   </div>
   <div id="modal-target">
-    <script>
-      artist_modalwindow("modal-target");
-    </script>
   </div>
 
   <!-- スクロールに応じて処理 -->
@@ -182,12 +184,14 @@
         // $('#content2').css("background-color", "var(--bgcolor-base)");
         // $('#content2-box').css("box-shadow", "0 0 3rem 3rem var(--bgcolor-base)");
       }
-      if (scrollTop > window.innerHeight * 1.01) {
+      if (scrollTop > window.innerHeight * 1.1) {
         $('#bgfilter').css('transition', '0');
+        $('#bgeffect').css('display', 'none');
         // $('#bgfilter').css('background-image', 'url("./imgs/top/sand-filter1.jpg")');
       } else {
         // $('#bgfilter').css('background-image', 'url("./imgs/top/sand-filter.jpg")');
         $('#bgfilter').css('transition', '4s');
+        $('#bgeffect').css('display', 'block');
       }
     }
     window.onload = function () {

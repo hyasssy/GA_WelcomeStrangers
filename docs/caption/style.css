@@ -1,0 +1,62 @@
+body{
+    scroll-behavior: smooth;
+    text-align: center;
+    color: var(--titleblack);
+    font-weight: 400;
+}
+button{
+    background: none;
+    border: none;
+}
+#langbutton{
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    width: 15rem;
+    height: 4rem;
+    background-color: red;
+}
+#langbutton button{
+    font-size: 2rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#ja-button{
+    display: none;
+}
+#en-button{
+    display: block;
+}
+
+#contents-wrapper{
+    width: 83%;
+    max-width: 65rem;
+    display: inline-block;
+    height: auto;
+    text-align: left;
+}
+#contents-target{
+    margin : 10rem 0;
+    background-color: yellow;
+}
+
+.artistinfo-root{
+    background-color: red;
+    width: 100%;
+    height: auto;
+    padding: 5rem 0;
+    margin-bottom: 3rem;
+    font-size: 1.4rem;
+}
+.artistinfo-text{
+
+}
+
+#copyright{
+    color: var(--baseblack);
+    border-top: solid 1px var(--baseblack);
+    margin-left: 0;
+    width: 100%;
+}

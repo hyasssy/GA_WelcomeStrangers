@@ -5,19 +5,103 @@ body {
 #top {
   width: 100%;
   height: 100%;
-  background-image: url(../imgs/top/main_yoko.jpg);
+  /* background-image: url(../imgs/top/main_yoko.jpg); */
   background-position: 50% 50%;
   background-size: cover;
   position: relative;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
+#bgeffect{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/top/main_yoko.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  opacity: 0.9;
+}
+#bgeffect::before,#bgeffect::after {
+  content: "";
+  background-image: url(../imgs/top/main_yoko.jpg);
+  background-position: 50% 50%;
+  background-size: cover;
+  vertical-align: middle;
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 110%;
+  height: 110%;
+  margin-top: -5%;
+  margin-left: -5%;
+  transform-origin: 50% 50%;
+  opacity: 0.6;
+}
+#bgeffect::before {
+  filter: sepia(100%) hue-rotate(220deg) saturate(2);
+  mix-blend-mode: darken;
+
+  animation-name: translateBefore;
+  animation-duration: 8s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  display: inline-block;
+}
+#bgeffect::after {
+  filter: sepia(80%) hue-rotate(-100deg) saturate(2);
+  mix-blend-mode: darken;
+
+  animation-name: translateAfter;
+  animation-duration: 11s;
+  animation-delay: 0;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  display: inline-block;
+}
+@keyframes translateBefore {
+  0% {
+    top: 6px;
+    left: -10px;
+    transform: rotate(-3deg);
+  }
+  50% {
+    top: -16px;
+    left: 15px;
+    transform: rotate(3deg);
+  }
+  100% {
+    top: 6px;
+    left: -10px;
+    transform: rotate(-3deg);
+  }
+}
+@keyframes translateAfter {
+  0% {
+    top: -6px;
+    left: -10px;
+    transform: rotate(3deg);
+  }
+  50% {
+    top: 16px;
+    left: 15px;
+    transform: rotate(-3deg);
+  }
+  100% {
+    top: -6px;
+    left: -10px;
+    transform: rotate(3deg);
+  }
+}
+
+
 #bgfilter {
   position: fixed;
   background-image: url("../imgs/top/sand-filter.jpg");
   background-size: cover;
   /* background-color: red; */
-  width: calc(100% - 0.5rem);
+  width: 100%;
   height: 100%;
   opacity: 0;
   /* filter: hue-rotate(30deg); */
@@ -31,13 +115,24 @@ body {
   z-index: 99;
   /* background-color: rgba(255, 0, 0, 0.3); */
 }
-#ja-button{
+#langbutton-wrapper{
+  position: relative;
+  display: block;
+  height: 2rem;
+  width: 11rem;
+  margin-bottom: 1rem;
+}
+#ja-button, #en-button{
+  position: absolute;
   display: none;
-  font-size: 3rem;
+  font-size: 2rem;
+  /* background-color: red; */
+  right: 3rem;
+  white-space: nowrap;
+  height: 100%;
 }
 #en-button{
   display: block;
-  font-size: 3rem;
 }
 #researve-box {
   width: 11rem;
@@ -52,6 +147,7 @@ body {
   width: 0%; /*最初はwidth:0にする*/
   height: 100%;
   background: var(--lemonyellow);
+  /* filter: drop-shadow(0 0 1rem var(--lemonyellow)); */
   position: absolute;
   top: 0;
   z-index: -1;
@@ -168,8 +264,12 @@ body {
   max-height: calc(100% - 1vw);
   max-width: calc(100% - 0.5vw);
   fill: var(--titleblack);
+  filter: drop-shadow(0 0 2px var(--bgcolor));
   transition: 1s;
   display: block;
+  transform-origin: 50% 50%;
+  transform:scale(.9);
+  transition: 2s ease-in-out;
 }
 #info-wrapper {
   position: absolute;
@@ -216,17 +316,29 @@ body {
 #topinfo img {
   width: 100%;
 }
-#content2, #content3, #content4 {
+#content2, #content3, #content4{
   /* color: var(--baseblack); */
   /* margin-top: 12rem; */
   /* background-color: var(--bgcolor-base); */
   background-color: var(--bgcolor);
+  /* border-top-right-radius: 7rem;
+  border-top-left-radius: 7rem; */
+  /* box-shadow: 0px 0px 3rem 3rem var(--bgcolor); */
+  filter: drop-shadow(0 0 4rem var(--bgcolor));
   transition: 4s;
   position: relative;
   width: 100%;
   text-align: center;
   padding: 3rem 0;
 }
+/* #content3, #content4 {
+  background-color: var(--bgcolor);
+  transition: 4s;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  padding: 3rem 0;
+} */
 /*あとでここは分ける必要がある。*/
 .content-box {
   display: inline-block;
@@ -247,6 +359,7 @@ h1 {
   letter-spacing: 0.1vw;
   font-size: 10vw;
   margin-bottom: 5rem;
+  filter: drop-shadow(0 0 2px var(--basewhite));
 }
 h1 span {
   display: inline-block;
@@ -400,6 +513,7 @@ h1 span {
 @media screen and (min-width: 480px) {
   /*スマホより大きい*/
 
+  #langbutton-wrapper,
   #researve-box,
   .nav-box {
     height: 2.5rem;
@@ -444,6 +558,7 @@ h1 span {
 }
 @media screen and (min-width: 896px) {
   /*タブレットより大きい*/
+  #langbutton-wrapper,
   #researve-box,
   .nav-box {
     height: 3rem;

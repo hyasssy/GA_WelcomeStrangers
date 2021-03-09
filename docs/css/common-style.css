@@ -64,7 +64,7 @@ a-otf-gothic-bbb-pr6n : 400
   --basehover: rgb(143, 183, 193);
   --basebeige: rgb(245, 224, 194);
   --lemonyellow: rgba(255, 247, 0, 0.927);
-  --bgcolor: rgba(154, 147, 132, 1);
+  --bgcolor: rgb(96, 93, 86);
   --bgcolor-base: rgba(154, 147, 132, 0);
 }
 body,
@@ -76,7 +76,7 @@ html {
   font-size: 10px;
   color: var(--baseblack);
   background-color: var(--basebeige);
-  font-family: "HelveticaNeue", "HiraKakuGo", sans-serif; /*ニュートラル*/
+  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
   font-weight: 100;
   letter-spacing: 0.1rem;
   /* scroll-behavior: smooth; */
@@ -86,7 +86,7 @@ html {
   background-color: var(--basebeige);
 }
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0;
   background-color: var(--bgcolor);
 }
 ::-webkit-scrollbar-thumb {
@@ -110,6 +110,7 @@ a:active {
   color: var(--basehover);
   transform: scale(1.1, 1.1);
   opacity: .6;
+  filter: drop-shadow(0 0.3rem 0.7rem var(--titleblack));
 }
 
 #copyright {
