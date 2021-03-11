@@ -349,7 +349,7 @@ body {
 
 }
 h1 {
-  font-family: 'Times New Roman', Times, "HelveticaNeue", sans-serif;
+  font-family: "TimesNR", 'Times New Roman', Times, sans-serif;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.1vw;
@@ -431,8 +431,8 @@ h1 span {
   height: 100%;
   fill: var(--neutralgray);
 }
-#twitter-button{
-  height: 10vh;
+#t-button{
+  height: 9vh;
   max-height: 10rem;
 }
 
@@ -519,13 +519,21 @@ h1 span {
   margin-top: 0.6rem;
 }
 .modal-caption{
-  display: inline-block;
-  /* letter-spacing: 0; */
-  background-color: blue;
-  font-size: 3.8vw;
-  line-height: 6vw;
-  letter-spacing: 0.5px;
+  display: block;
+  /* background-color: blue; */
+  font-size: 1rem;
+  font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
+  font-weight: 100;
+  line-height: 1.5rem;
+  letter-spacing: 0;
   transform: scale(0.95, 1);
+  color: var(--baseblack);
+}
+.modal-name{
+  background-color: red;
+  width: 5rem;
+  height: 5rem;
+  font-size: large;
 }
 
 

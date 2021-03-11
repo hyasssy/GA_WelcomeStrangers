@@ -20,11 +20,12 @@
   font-family: "Moon";
   src: url(../fonts/Moon2.0-Light.otf);
 }
-/* @font-face {
+@font-face {
   font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W1.ttc);
+  src: url(../fonts/HiraKakuGo_W1_subset.otf);
   font-weight: 100;
 }
+/*
 @font-face {
   font-family: "HiraKakuGo";
   src: url(../fonts/HiraKakuGo_W3.ttc);

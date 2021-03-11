@@ -22,32 +22,34 @@ $(document).ready(function () {
 let _artistdata = [
     {
         id: "artist1",
-        name: "遠藤薫",
-        // flag: false,
         img_portrait: "./imgs/artists/portrait/endo.jpg",
         img_work: ["./imgs/artists/portrait/endo.jpg", "", ""],
-        text_id: ["artist1_text"],
-        text: [{ ja: "キャプション1", en: "caption1" }],
+        text: {
+            name: { id: "a1name", ja: "遠藤薫", en: "Kaoru Endo" },
+            caption1: { id: "a1c1", ja: "キャプション1caption1", en: "caption1" },
+        },
         statement: "none"
     },
     {
         id: "artist2",
-        name: "藤井光",
-        // flag: false,
         img_portrait: "./imgs/artists/portrait/fujii.jpg",
         img_work: ["", "", ""],
-        text_id: ["artist2_text"],
-        text: [{ ja: "アーティスト2", en: "artist2" }],
+        text: {
+            name: { id: "a2name", ja: "遠藤薫", en: "Kaoru Endo" },
+            caption1: { id: "a2c1", ja: "キャプション1", en: "caption1" },
+
+        },
         statement: "none"
     },
     {
         id: "artist3",
-        name: "藤井光",
-        // flag: false,
         img_portrait: "./imgs/artists/portrait/fujii.jpg",
         img_work: ["", "", ""],
-        text_id: ["artist3_text"],
-        text: [{ ja: "アーティスト3", en: "artist2" }],
+        text: {
+            name: { id: "a3name", ja: "遠藤薫", en: "Kaoru Endo" },
+            caption1: { id: "a3c1", ja: "キャプション1", en: "caption1" },
+            portraitcaption: { id: "a3pc", ja: "portrait：©Shrutti Garg", en: "portrait：©Shrutti Garg" }
+        },
         statement: "none"
     },
 ];
@@ -63,8 +65,8 @@ function artist_thumbnail(target) {
         img.src = _artistdata[i].img_portrait;
         a.appendChild(img);
         var span = document.createElement("span");
-        span.textContent = _artistdata[i].name;
         span.className = "list";
+        span.id = _artistdata[i].text.name.id;
         a.appendChild(span);
         pos.appendChild(a);
     }
@@ -93,24 +95,44 @@ function artist_modalcontent(artistdata) {
     var div = document.createElement("div");
     div.className = "modal-topcaption";
     var caption1 = document.createElement("div");
-    caption1.id = artistdata.text_id[0];
+    caption1.id = artistdata.text.caption1.id;
     caption1.className = "modal-caption";
     div.appendChild(caption1);
-    if (false/*アイコンにキャプションがあれば*/) {
+    var pc = artistdata.text.portraitcaption;
+    if (pc != null) {
         var caption2 = document.createElement("div");
-        caption2.id = "";
+        caption2.id = pc.id;
         caption2.className = "modal-caption";
         div.appendChild(caption2);
     }
     root.appendChild(div);
+    var div = document.createElement("div");
+    div.className = "modal-name";
+    div.id = artistdata.text.name.id;
+    div.textContent = "SDSFAEWFA";
+    console.log("name is " + div.id);
+    root.appendChild(div);
+    console.log(document.getElementById(this[key].id).textContent);
     target.appendChild(root);
 }
 function artist_setlang() {
     console.log("artistpageの言語読み込み" + currentLang);
     for (let i = 0; i < _artistdata.length; i++) {
-        for (let n = 0; n < _artistdata[i].text_id.length; n++) {
-            document.getElementById(_artistdata[i].text_id[n]).innerHTML = currentLang == "ja" ? _artistdata[i].text[n].ja : _artistdata[i].text[n].en;
-        }
-
+        Object.keys(_artistdata[i].text).forEach(function (key) {
+            console.log(this[key].id + this[key].ja + document.getElementById(this[key].id).textContent);
+            document.getElementById(this[key].id).innerHTML = currentLang == "ja" ? this[key].ja : this[key].en;
+        }, _artistdata[i].text);
     }
+}
+//改行やスペースをコードに落とし込んだstringに変換する。
+function ht_str(str) {
+    if (str == null) return '';
+    str = str.toString();
+    str = str.replace(/&/g, '&amp;');
+    str = str.replace(/</g, '&lt;');
+    str = str.replace(/>/g, '&gt;');
+    // str = str.replace( / /g,'&nbsp;' );
+    // str = str.replace( /\t/g,'&nbsp;&nbsp;&nbsp;&nbsp;' ); // Tabをスペース4つに..
+    str = str.replace(/\r?\n/g, "<br />\n");
+    return str;
 }
