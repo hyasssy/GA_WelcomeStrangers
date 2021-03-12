@@ -12,7 +12,7 @@ body {
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
 }
-#bgeffect{
+#bgeffect {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -21,7 +21,8 @@ body {
   background-size: cover;
   opacity: 0.9;
 }
-#bgeffect::before,#bgeffect::after {
+#bgeffect::before,
+#bgeffect::after {
   content: "";
   background-image: url(../imgs/top/main_yoko.jpg);
   background-position: 50% 50%;
@@ -95,7 +96,6 @@ body {
   }
 }
 
-
 #bgfilter {
   position: fixed;
   background-image: url("../imgs/top/sand-filter.jpg");
@@ -115,14 +115,15 @@ body {
   z-index: 99;
   /* background-color: rgba(255, 0, 0, 0.3); */
 }
-#langbutton-wrapper{
+#langbutton-wrapper {
   position: relative;
   display: block;
   height: 2rem;
   width: 11rem;
   margin-bottom: 1rem;
 }
-#ja-button, #en-button{
+#ja-button,
+#en-button {
   position: absolute;
   display: none;
   font-size: 2rem;
@@ -131,7 +132,7 @@ body {
   white-space: nowrap;
   height: 100%;
 }
-#en-button{
+#en-button {
   display: block;
 }
 #researve-box {
@@ -264,7 +265,7 @@ body {
   transition: 1s;
   display: block;
   transform-origin: 50% 50%;
-  transform:scale(.9);
+  transform: scale(0.9);
   transition: 2s ease-in-out;
 }
 #info-wrapper {
@@ -312,7 +313,10 @@ body {
 #topinfo img {
   width: 100%;
 }
-#content2, #content3, #content4{
+#content2,
+#content3,
+#content4,
+#content5 {
   /* color: var(--baseblack); */
   /* margin-top: 12rem; */
   /* background-color: var(--bgcolor-base); */
@@ -346,10 +350,9 @@ body {
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
   font-weight: 400;
   /* box-shadow: 0 0 3rem 3rem var(--bgcolor-base); */
-
 }
 h1 {
-  font-family: "TimesNR", 'Times New Roman', Times, sans-serif;
+  font-family: "TimesNR", "Times New Roman", Times, sans-serif;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.1vw;
@@ -414,12 +417,12 @@ h1 span {
   filter: hue-rotate(20deg) invert(10%);
   -webkit-filter: hue-rotate(20deg) invert(10%);
 }
-#sns-box{
+#sns-box {
   justify-content: space-evenly;
   width: 100%;
   margin: 5rem 0;
 }
-.sns-button{
+.sns-button {
   margin-bottom: 3rem;
   display: inline-block;
   height: 6vh;
@@ -427,16 +430,16 @@ h1 span {
   /* background-color: red; */
   margin-right: 1.1rem;
 }
-.sns-button img{
+.sns-button img {
   height: 100%;
   fill: var(--neutralgray);
 }
-#t-button{
+#t-button {
   height: 9vh;
   max-height: 10rem;
 }
 
-#thumbnail-target{
+#thumbnail-target {
   display: flex;
   /* align-content: space-between; */
   flex-wrap: wrap;
@@ -445,20 +448,20 @@ h1 span {
   width: 100%;
   height: auto;
 }
-.artist-thumbnail-box{
+.artist-thumbnail-box {
   /* background-color: yellow; */
   display: block;
   width: 48%;
   height: auto;
-  margin-bottom: .3rem;
+  margin-bottom: 0.3rem;
   /* margin-right: 3%; */
 }
-.artist-thumbnail-box img{
+.artist-thumbnail-box img {
   object-fit: cover;
   width: 100%;
   height: auto;
 }
-.artist-thumbnail-box span{
+.artist-thumbnail-box span {
   width: 100%;
   text-align: right;
   transform: scale(0.95, 1);
@@ -468,9 +471,8 @@ h1 span {
   /* background-color: yellow; */
 }
 
-
 /*モーダルウィンドウ関連*/
-#modal-target{
+#modal-target {
   position: relative;
 }
 .modal {
@@ -503,40 +505,58 @@ h1 span {
   /* overflow-y: scroll; */
   overflow-y: overlay; /*スクロールバーをオーバーレイする。webkit対応ブラウザのみ*/
 }
-.modal-content img{
+.modal-content img {
   width: 100%;
   max-height: 85%;
   object-fit: cover;
 }
-.js-modal-open{
+.js-modal-open {
   display: inline-block;
   /* background-color: red; */
 }
-.modal-topcaption{
+.modal-captionbox {
   /* background-color: red; */
   text-align: right;
-  margin-right: 1.5rem;
+  margin-right: 2.5%;
   margin-top: 0.6rem;
+  transform: scale(0.95, 1);
+  margin-bottom: 3rem;
 }
-.modal-caption{
+.modal-caption {
   display: block;
+  text-align: right;
   /* background-color: blue; */
   font-size: 1rem;
   font-family: "HelveticaNeue", "HiraKakuGo", sans-serif;
   font-weight: 100;
   line-height: 1.5rem;
   letter-spacing: 0;
-  transform: scale(0.95, 1);
   color: var(--baseblack);
 }
-.modal-name{
-  background-color: red;
-  width: 5rem;
-  height: 5rem;
-  font-size: large;
+.modal-name {
+  /* background-color: red; */
+  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
+  font-weight: 400;
+  font-size: 4.7vw;
+  color: var(--titleblack);
+  margin-bottom: 2rem;
+  margin-left: 5%;
 }
-
-
+.modal-text {
+  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif;
+  font-weight: 400;
+  font-size: 3.4vw;
+  line-height: 5.6vw;
+  /* letter-spacing: -0.03rem; */
+  text-align: justify;
+  color: var(--titleblack);
+  margin: 0 2.5%;
+  transform: scale(0.95, 1);
+  /* width: 105%; */
+}
+.modal-space {
+  height: 6rem;
+}
 
 #logo-box {
   width: 100%;
@@ -551,7 +571,7 @@ h1 span {
   display: inline-block;
   height: 3.6rem;
 }
-#logo-box a img{
+#logo-box a img {
   height: 100%;
 }
 
@@ -627,7 +647,24 @@ h1 span {
   h1 {
     font-size: 4.2rem;
   }
-  #logo-box{
+  .modal-captionbox {
+    margin-bottom: 4rem;
+  }
+  .modal-caption {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0;
+    color: var(--baseblack);
+  }
+  .modal-name {
+    font-size: 2.3rem;
+    margin-bottom: 3rem;
+  }
+  .modal-text {
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+  }
+  #logo-box {
     justify-content: left;
   }
   #logo-box a {

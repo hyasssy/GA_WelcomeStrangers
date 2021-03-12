@@ -16,7 +16,7 @@
   font-weight: 300;
   font-style: italic;
 }
-@font-face{
+@font-face {
   font-family: "Moon";
   src: url(../fonts/Moon2.0-Light.otf);
 }
@@ -110,7 +110,7 @@ a:hover,
 a:active {
   color: var(--basehover);
   transform: scale(1.1, 1.1);
-  opacity: .8;
+  opacity: 0.8;
   filter: drop-shadow(0 0.3rem 0.7rem var(--titleblack));
 }
 
@@ -152,5 +152,4 @@ a:active {
 }
 @media screen and (min-width: 896px) {
   /*タブレットより大きい*/
-
 }
