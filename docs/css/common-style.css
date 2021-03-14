@@ -10,12 +10,12 @@
   src: url(../fonts/HelveticaNeue.ttf);
   font-weight: 400;
 }
-@font-face {
+/* @font-face {
   font-family: "TimesNR";
   src: url(../fonts/TimesNewRomanItalic.ttf);
   font-weight: 300;
   font-style: italic;
-}
+} */
 @font-face {
   font-family: "Moon";
   src: url(../fonts/Moon2.0-Light.otf);
@@ -64,9 +64,10 @@ a-otf-gothic-bbb-pr6n : 400
   --baselink: rgb(66, 115, 223);
   --basehover: rgb(143, 183, 193);
   --basebeige: rgb(245, 224, 194);
-  --lemonyellow: rgba(255, 247, 0, 0.927);
+  --lemonyellow: rgb(12, 12, 12);
   --bgcolor: rgb(96, 93, 86);
   --bgcolor-base: rgba(154, 147, 132, 0);
+  --bgcolor-online: #b3768f;
 }
 body,
 html {
@@ -80,7 +81,7 @@ html {
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
   font-weight: 100;
   letter-spacing: 0.1rem;
-  /* scroll-behavior: smooth; */
+  scroll-behavior: smooth;
   visibility: hidden;
 }
 html {

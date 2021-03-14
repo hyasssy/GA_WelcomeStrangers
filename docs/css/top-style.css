@@ -11,6 +11,7 @@ body {
   position: relative;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
 }
 #bgeffect {
   position: fixed;
@@ -105,13 +106,13 @@ body {
   height: 100%;
   opacity: 0;
   /* filter: hue-rotate(30deg); */
-  transition: 4s;
+  transition: 2s;
 }
 #navigation-wrapper {
   position: fixed;
   width: 0;
   right: 11rem;
-  top: 10%;
+  top: 8%;
   z-index: 99;
   /* background-color: rgba(255, 0, 0, 0.3); */
 }
@@ -120,17 +121,18 @@ body {
   display: block;
   height: 2rem;
   width: 11rem;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 #ja-button,
 #en-button {
   position: absolute;
   display: none;
-  font-size: 2rem;
+  /* font-size: 2rem; */
   /* background-color: red; */
   right: 3rem;
   white-space: nowrap;
-  height: 100%;
+  height: auto;
+  width: 4rem;
 }
 #en-button {
   display: block;
@@ -154,12 +156,6 @@ body {
   z-index: -1;
   transition: all 0.7s; /*アニメーションの長さ*/
 }
-#researve-box a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
 .nav-box {
   width: 11rem;
   /* background-color: rgba(255, 0, 0, 0.3); */
@@ -167,12 +163,28 @@ body {
   position: relative;
   height: 2rem;
 }
+.nav-box-small {
+  width: 11rem;
+  /* background-color: rgba(255, 0, 0, 0.3); */
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  height: 1.4rem;
+}
 .nav-border {
   position: absolute;
   border-top: solid 2.6px var(--titleblack);
   top: 50%;
   right: -1rem;
   width: 3rem;
+  height: 100%;
+}
+.nav-border-short {
+  position: absolute;
+  border-top: solid 2.6px var(--titleblack);
+  top: 50%;
+  right: -0.5rem;
+  width: 1.5rem;
   height: 100%;
 }
 #rightarrow {
@@ -210,32 +222,32 @@ body {
   right: 3rem;
   white-space: nowrap;
   height: 100%;
+  /* top: 3%; */
   /* background-color: blue; */
+  text-align: right;
 }
-#doresearve img {
+#doresearve svg {
   /* background-color: red; */
+  fill: var(--titleblack);
   height: 100%;
+  transform: scale(0.94);
+  transform-origin: 100% 50%;
+  /* transition: 0.7s; */
 }
 
-/* #sns-button {
+#nav-show,
+#nav-info,
+#nav-artists,
+#nav-online {
   position: absolute;
-  max-width: 3.5rem;
-  height: 100%;
   right: 3rem;
+  height: 70%;
+  top: 15%;
 }
-#sns-button img {
-  height: 100%;
-} */
-#webcontents-comingsoon {
-  position: absolute;
-  /* width: 80%; */
-  right: 3rem;
-  height: 100%;
-  /* background-color: rgba(255, 0, 0, 0.3); */
-  /* display: flex; */
-}
-#webcontents-comingsoon img {
-  /* width: 100%; */
+#nav-show img,
+#nav-info img,
+#nav-artists img,
+#nav-online img {
   height: 100%;
 }
 
@@ -262,7 +274,6 @@ body {
   max-width: calc(100% - 0.5vw);
   fill: var(--titleblack);
   filter: drop-shadow(0 0 2px var(--bgcolor));
-  transition: 1s;
   display: block;
   transform-origin: 50% 50%;
   transform: scale(0.9);
@@ -270,26 +281,50 @@ body {
 }
 #info-wrapper {
   position: absolute;
-  bottom: 0.5vw;
+  /* bottom: 0.5vw; */
+  bottom: 0;
+  width: 100%;
+  text-align: right;
+  /* background-color: red; */
+}
+#downarrow-box {
+  position: absolute;
+  bottom: 0;
   width: 100%;
   text-align: center;
+  /* background-color: red; */
+}
+#downarrow-box2 {
+  display: inline-block;
+  position: relative;
+  right: 0;
+  width: 80%;
+  max-width: 60rem;
+  height: 3rem;
+  /* background-color: blue; */
 }
 #info-box {
   display: inline-block;
-  width: 80%;
-  max-width: 50rem;
+  position: relative;
+  right: 0;
+  width: 90%;
+  max-width: 60rem;
   text-align: left;
   /* background-color: blue; */
 }
 #downarrow {
   width: 6%;
   max-width: 3.2rem;
-  position: relative;
+  position: absolute;
+  /* left: -5rem; */
+  bottom: 3rem;
 }
 #downarrow img {
+  /* background-color: violet; */
   width: 100%;
-  position: absolute;
-  top: -5rem;
+  /* position: absolute; */
+  /* top: -5rem; */
+  /* bottom: 5rem; */
   animation-name: float-vertical;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -308,7 +343,10 @@ body {
   }
 }
 #topinfo {
-  width: 112%;
+  /* width: 112%; */
+  /* background-color: yellow; */
+  margin-right: 0.5vw;
+  margin-bottom: 0.5vw;
 }
 #topinfo img {
   width: 100%;
@@ -325,21 +363,14 @@ body {
   border-top-left-radius: 7rem; */
   /* box-shadow: 0px 0px 3rem 3rem var(--bgcolor); */
   filter: drop-shadow(0 0 4rem var(--bgcolor));
-  transition: 4s;
   position: relative;
   width: 100%;
   text-align: center;
   /* padding: 3rem 0; */
 }
-/* #content3, #content4 {
-  background-color: var(--bgcolor);
-  transition: 4s;
-  position: relative;
-  width: 100%;
-  text-align: center;
-  padding: 3rem 0;
-} */
-/*あとでここは分ける必要がある。*/
+#content4 {
+  background-color: var(--bgcolor-online);
+}
 .content-box {
   display: inline-block;
   width: 83%;
@@ -352,7 +383,7 @@ body {
   /* box-shadow: 0 0 3rem 3rem var(--bgcolor-base); */
 }
 h1 {
-  font-family: "TimesNR", "Times New Roman", Times, sans-serif;
+  font-family: "HelveticaNeue", sans-serif;
   font-weight: 200;
   font-style: italic;
   letter-spacing: 0.1vw;
@@ -455,6 +486,9 @@ h1 span {
   height: auto;
   margin-bottom: 0.3rem;
   /* margin-right: 3%; */
+}
+.artist-thumbnail-box:hover {
+  transform: scale(1.05) !important;
 }
 .artist-thumbnail-box img {
   object-fit: cover;
@@ -579,29 +613,6 @@ h1 span {
   position: relative;
 }
 
-/* .down-arrow img {
-  position: absolute;
-  bottom: -3rem;
-  width: 3.5rem;
-  opacity: 0.9; */
-
-/*上下アニメーション*/
-/* animation-name: float-arrow;
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-  animation-duration: 0.75s;
-} */
-
-/*@keyframes float-arrow {
-  0% {
-    transform: translate(0, 0px);
-  }
-  100% {
-    transform: translate(0, 15px);
-  }
-}*/
-
 @media only screen and (orientation: landscape) {
   /*横長*/
   /* .title{
@@ -612,6 +623,10 @@ h1 span {
 @media screen and (min-width: 480px) {
   /*スマホより大きい*/
 
+  #ja-button,
+  #en-button {
+    width: 4.3rem;
+  }
   #langbutton-wrapper,
   #researve-box,
   .nav-box {
@@ -619,9 +634,19 @@ h1 span {
     margin-bottom: 1.5rem;
     width: 13rem;
   }
+  .nav-box-small {
+    height: 1.75rem;
+    margin-top: -1rem;
+    margin-bottom: 1.5rem;
+    width: 13rem;
+  }
+
   #navigation-wrapper {
     right: 13rem;
-    top: 15%;
+    top: 12%;
+  }
+  #downarrow {
+    bottom: 1rem;
   }
 
   .title {
@@ -677,12 +702,16 @@ h1 span {
   #langbutton-wrapper,
   #researve-box,
   .nav-box {
-    height: 3rem;
-    margin-bottom: 2rem;
+    height: 2.8rem;
+    width: 15rem;
+  }
+  .nav-box-small {
+    height: 1.8rem;
     width: 15rem;
   }
   #navigation-wrapper {
     right: 15rem;
+    top: 3rem;
   }
   .modal-content {
     width: 60%;
