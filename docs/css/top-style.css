@@ -562,7 +562,7 @@ h1 span {
   font-weight: 400;
   font-size: 3.4vw;
   line-height: 5.6vw;
-  /* letter-spacing: -0.03rem; */
+  letter-spacing: 0;
   text-align: justify;
   color: var(--titleblack);
   margin: 0 2.5%;
