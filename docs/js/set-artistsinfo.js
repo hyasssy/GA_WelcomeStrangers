@@ -337,9 +337,9 @@ function artist_modalcontent(artistdata) {
         caption3.className = "modal-caption";
         div.appendChild(caption3);
         root.appendChild(div);
-    //     var nullspace = document.createElement("div");
-    // nullspace.className = "modal-space";
-    // root.appendChild(nullspace);
+        var nullspace = document.createElement("div");
+    nullspace.className = "modal-space";
+    root.appendChild(nullspace);
     }
     target.appendChild(root);
 }
