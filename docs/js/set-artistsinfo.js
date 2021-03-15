@@ -128,8 +128,8 @@ Photo by  Pat Verbruggen
             `, 
             en: `The House, 2018, wood,old wood, video
             Courtesy of MMCA
-            Photo by Moon June Hee
-        7` },
+            Photo by Moon June Hee`
+        },
             portraitcaption: { id: "a4pc", ja: "portrait：©Charlotte Raymond", en: "portrait：©Charlotte Raymond" },
             div_description: {id:"a4d1", ja:"神奈川県横浜市出身。2013年東京藝術大学美術研究科先端芸術表現修了。歴史や社会の状況を反映するとともに、国家の文化やアイデンティティ形成のツールにもなる建築をテーマに美術と建築を横断する活動を続ける。近年は日本占領下の韓国や台湾で作られた日本家屋やアメリカ合衆国で焼夷弾実験のために作られた日本村の設計などの調査を通し、異なる歴史的背景と場所において日本家屋が孕んだ多様な意味を描き出すプロジェクトを手がける。2018年ACCアジアン・カルチュラル・カウンシル・フェロー。近年のグループ展に「対話のあとさき」（横浜市民ギャラリー、神奈川、2019年）、「行為の編纂」（Tokyo Arts and Space TOKAS、東京、2018年）、「How Little You Know About Me」（韓国国立現代美術館MMCA Seoul、韓国、2018年）など。", en:`Yusuke Kamata was born in Yokohama and gained a M.A. degree in inter-media art from Tokyo University of the Arts. He works across the boundaries of architecture and art. In his view, architectural practices not only reflect the history and social conditions but also form national identity and culture. In recent years, he has been conducting research on Japanese houses built in Korea and Taiwan during the Japanese occupation, and on the design of the Japanese Village (a range of houses constructed for incendiary bomb tests in the United States). His projects depict the multiple connotations of Japanese houses in different historical contexts and locations. He was selected as Asian Culture Council Fellow in 2018. Selected group exhibitions: “Ongoing Dialogue” (Yokohama Civic Gallery, Kanagawa, Japan, 2019), “Compiling behaviors, digesting actions” (Tokyo Arts & Space TOKAS, Tokyo, Japan, 2018), “How Little You Know About Me” (MMCA Seoul, South Korea, 2018).`},
         },

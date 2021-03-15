@@ -42,8 +42,8 @@ const _topdata = {
         ja: `会期：2021/3/20th Sat. - 4/7th Wed.（月曜休館）
         時間：10:00 - 18:00（入場は閉館の30分前まで）
         入場：無料・要予約`,
-        en: `DATE : 2021/3/20th Sat. - 4/7th Wed.
-        TIME : 10:00a.m. - 6:00p.m. (last entry at 5:30 p.m.) Closed on Mondays
+        en: `DATE : 2021/3/20th Sat. - 4/7th Wed. Closed on Mondays
+        TIME : 10:00a.m. - 6:00p.m. (last entry at 5:30 p.m.)
         ENTER : Admission Free / Reservation Required
         `
     },
