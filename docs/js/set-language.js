@@ -3,15 +3,28 @@ var defaultLang = (window.navigator.languages && window.navigator.languages[0]) 
     window.navigator.userLanguage ||
     window.navigator.browserLanguage;
 
+var currentLang;
+$(document).ready(function () {
+        currentLang = defaultLang;
+        //あとでボタンで切り替えできるようにする。
+        var cookie_lang = $.cookie('lang');
+        if (cookie_lang) {
+            currentLang = cookie_lang;
+        }
+        //ローカルでは確認できなかった。サーバー上げたら確認できる。
+        console.log("読み込み時のcookie : " + document.cookie);
+        setlang();
+        $('#ja-button').on('click', function () {
+            button_ja();
+            return false;
+        });
+        $('#en-button').on('click', function () {
+            button_en();
+            return false;
+        });
+});
+
 const _topdata = {
-    // img_doreserve:{
-    //     ja: "",
-    //     en: ""
-    // },
-    // img_onlinecontents:{
-    //     ja:"",
-    //     en:""
-    // }
     text_about: {
         ja: `私たちが「見知らぬもの（=stranger）」と見做すもの、それは一体なんでしょうか。
         初めて出会うものや知らなかったことに対する認識とするならば、今日私たちの前に現れた未知のウイルスもまた、その一つかもしれません。ウイルスは、私たちの慣れ親しんだ環境を一変させました。そうした状況に戸惑う我々も「不慣れな人（=stranger）」と言えるでしょう。
@@ -25,28 +38,6 @@ const _topdata = {
 
         This exhibition is planned and organized by the students of the Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, as a part of the class of Arts Studies and Curatorial Practices Seminar: Curation I, under the supervision of Professor Yuko Hasegawa.`
     },
-    // text_artistslist: {
-    //     ja: `遠藤薫
-    //     藤井光
-    //     シルパ・グプタ
-    //     鎌田友介
-    //     アーシャ・マラクリナ
-    //     門馬美喜
-    //     イルーヤン・モンテネグロ
-    //     スプツニ子!
-    //     蔡佳葳
-    //     横山奈美`,
-    //     en: `Kaori Endo
-    //     Hikaru Fujii
-    //     Shilpa Gupta
-    //     Yusuke Kamata
-    //     Asya Marakulina
-    //     Miki Momma
-    //     Yllang Montenegro
-    //     Sputniko!
-    //     Charwei Tsai
-    //     Nami Yokoyama`
-    // },
     text_infolist1: {
         ja: `会期：2021/3/20th Sat. - 4/7th Wed.（月曜休館）
         時間：10:00 - 18:00（入場は閉館の30分前まで）
@@ -86,65 +77,46 @@ const _topdata = {
         Tel: 050-5525-2725 （担当: 三宅敦大）
         Fax: 03-6846-8685
         E-mail: ga-exhibition@ml.geidai.ac.jp (陳列館企画室)`,
-        en: `lack of info!!!!!!!!!`
-    },
-    // text_infolist5: {
-    //     ja: `*本展覧会は、2016年に設立された東京藝術大学大学院国際芸術創造研究科（GA）アートプロデュース専攻キュレーション領域の長谷川祐子教授の授業として実施される本年で5年目をむかえるプロジェクトであり、長谷川祐子教授監修のもと本授業履修生を中心に企画・運営をおこなっています。`,
-    //     en: `*This exhibition is planned and organized by the students of the Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, as a part of the class of Arts Studies and Curatorial Practices Seminar: Curation I, under the supervision of Professor Yuko Hasegawa.`
-    // },
-    // text_contact: {
-    //     ja: ``,
-    //     en: `Contact
-    //     東京藝術大学大学院国際芸術創造研究科
-    //     アートプロデュース専攻 キュレーション研究分野
-    //     〒110-8714 東京都台東区上野公園12-8 国際芸術創造研究科教員室
-    //     Tel: 050-5525-2725 （担当: 三宅敦大）
-    //     Fax: 03-6846-8685
-    //     E-mail: ga-exhibition@ml.geidai.ac.jp (陳列館企画室)`
-    // },
-    // text_infolist6: {
-    //     ja: ``,
-    //     en: ``
-    // },
-    // text_infolist6: {
-    //     ja: ``,
-    //     en: ``
-    // },
-}
-var currentLang;
-$(document).ready(function () {
-    currentLang = defaultLang;
-    //あとでボタンで切り替えできるようにする。
-    var cookie_lang = $.cookie('lang');
-    if (cookie_lang) {
-        currentLang = cookie_lang;
-    }
-    //ローカルでは確認できなかった。サーバー上げたら確認できる。
-    console.log("読み込み時のcookie : " + document.cookie);
-    setlang();
-    $('#ja-button').on('click', function () {
-        $('#ja-button').fadeOut();
-        $('#en-button').fadeIn();
-        button_ja();
-        return false;
-    });
-    $('#en-button').on('click', function () {
-        $('#en-button').fadeOut();
-        $('#ja-button').fadeIn();
-        button_en();
-        return false;
-    });
+        en: `Organized by Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts
+        Co-organized by Culture Vision Japan Foundation Inc.
+        Subsidised by Geidai Friends
+        Supported by KENJI TAKI GALLERY, TURNER COLOUR WORKS
+        Supervisor: Yuko Hasegawa (Professor, Graduate School of Tokyo University of the Arts and Artistic Director, Museum of Contemporary Art, Tokyo)
+        Co-curators: Kawthar Alzaid, Fang Yang, Ekaterina Kuzmina, Riho Matsue, Keisuke, Nakaya, Ness Roque, Saya Fukushi, Toshio Watanabe, Kent Nakamoto
+        Main Visual: Yuchen Cao
+        Web Designer: Yuto Hayashi
 
-});
+        Public Relations Contact：
+
+        Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, Faculty Room, 12-8 Ueno Koen, Taito-ku, Tokyo 110-8714, Japan
+
+        Tel: 050-5525-2725 （Atsuhiro Miyake）
+        Fax: 03-6846-8685
+        E-mail: ga-exhibition@ml.geidai.ac.jp`
+    },
+}
+
 
 function setlang() {
     console.log("translate" + currentLang);
+    if(currentLang == "ja"){
+        $('#ja-button').css('display', 'none');
+        $('#en-button').css('display', 'block');
+        $('#researve-ja').css('display', 'block');
+        $('#researve-en').css('display', 'none');
+    }else{
+        $('#ja-button').css('display', 'block');
+        $('#en-button').css('display', 'none');
+        $('#researve-ja').css('display', 'none');
+        $('#researve-en').css('display', 'block');
+    }
     Object.keys(_topdata).forEach(function (key) {
         var target = document.getElementById(key);
         if (target != null) {
             target.innerHTML = ht_str(currentLang == "ja" ? _topdata[key].ja : _topdata[key].en);
         }
     });
+    
     $.cookie('lang', currentLang);
     console.log("cookie : " + document.cookie);
 }

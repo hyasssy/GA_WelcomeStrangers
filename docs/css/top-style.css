@@ -111,10 +111,9 @@ body {
 #navigation-wrapper {
   position: fixed;
   width: 0;
-  right: 11rem;
+  right: 10.8rem;
   top: 8%;
   z-index: 99;
-  /* background-color: rgba(255, 0, 0, 0.3); */
 }
 #langbutton-wrapper {
   position: relative;
@@ -127,8 +126,7 @@ body {
 #en-button {
   position: absolute;
   display: none;
-  /* font-size: 2rem; */
-  /* background-color: red; */
+  cursor: pointer;
   right: 3rem;
   white-space: nowrap;
   height: auto;
@@ -139,18 +137,15 @@ body {
 }
 #researve-box {
   width: 11rem;
-  /* background-color: rgba(255, 0, 0, 0.3); */
   margin-bottom: 1rem;
   position: relative;
   height: 2rem;
-  /* background-color: var(--lemonyellow); */
 }
 #researve-box::after {
   content: "";
   width: 0%; /*最初はwidth:0にする*/
   height: 100%;
   background: var(--lemonyellow);
-  /* filter: drop-shadow(0 0 1rem var(--lemonyellow)); */
   position: absolute;
   top: 0;
   z-index: -1;
@@ -158,14 +153,12 @@ body {
 }
 .nav-box {
   width: 11rem;
-  /* background-color: rgba(255, 0, 0, 0.3); */
   margin-bottom: 1rem;
   position: relative;
   height: 2rem;
 }
 .nav-box-small {
   width: 11rem;
-  /* background-color: rgba(255, 0, 0, 0.3); */
   margin-top: -0.5rem;
   margin-bottom: 1rem;
   position: relative;
@@ -193,12 +186,10 @@ body {
   height: 100%;
   left: -4rem;
   position: absolute;
-  /* background-color: royalblue; */
 }
 #rightarrow img {
   width: 100%;
   height: 100%;
-  /* background-color: red; */
   animation-name: float-horizontal;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
@@ -218,21 +209,20 @@ body {
 }
 #doresearve {
   position: absolute;
-  /* width: auto; */
+  width: auto;
   right: 3rem;
   white-space: nowrap;
   height: 100%;
-  /* top: 3%; */
-  /* background-color: blue; */
   text-align: right;
 }
 #doresearve svg {
-  /* background-color: red; */
   fill: var(--titleblack);
   height: 100%;
   transform: scale(0.94);
   transform-origin: 100% 50%;
-  /* transition: 0.7s; */
+}
+#researve-ja #researve-en {
+  display: none;
 }
 
 #nav-show,
@@ -262,11 +252,9 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  /* background-color: red; */
   z-index: 1;
 }
 .title {
-  /* background-color: rgb(255, 0, 0, 0.2); */
   top: 0.5vw;
   left: 0.5vw;
   position: fixed;
@@ -429,13 +417,6 @@ h1 span {
   text-align: justify;
   /* transform: scale(0.95, 1); */
 }
-/* .text-border {
-  border-top: solid 1px var(--basewhite);
-  margin-top: 3rem;
-  margin-bottom: 3rem;
-  width: 40%;
-  max-width: 30rem;
-} */
 .map {
   position: relative;
   width: 100%;
@@ -645,9 +626,6 @@ h1 span {
     right: 13rem;
     top: 12%;
   }
-  #downarrow {
-    bottom: 1rem;
-  }
 
   .title {
     height: 100%;
@@ -712,6 +690,9 @@ h1 span {
   #navigation-wrapper {
     right: 15rem;
     top: 3rem;
+  }
+  #downarrow {
+    bottom: 1rem;
   }
   .modal-content {
     width: 60%;

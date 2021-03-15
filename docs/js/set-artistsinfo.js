@@ -165,7 +165,11 @@ Photo by  Pat Verbruggen
             Photo by Shinya Kigure` },
             portraitcaption: { id: "a6pc", ja: "portrait：©Shrutti Garg", en: "portrait：©Shrutti Garg" },
             div_description: {id:"a6d1", ja:"1981年福島県相馬市出身。2005年東京造形大学卒業。2006年から2007年中国美術学院および中央美術学院に留学。その後中国大陸を制作しながら縦断、横断し帰国。2013年東日本大震災の影響で止めていた美術制作を再開。2020年にJR常磐線が再開通するまで、鉄道不通の東京〜相馬間を100回以上行き来し、現在も福島県沿岸部を中心に、目にした風景を描くRouteシリーズの制作を続けている。アクリルガッシュビエンナーレ 2018 において〈Route93 ヶ月■相馬/大田区〉が大賞受賞。近年の展示に「対話のあとさき」（横浜市民ギャラリー、神奈川、2019年）、「Art Meets06 門馬美喜｜やんツー」（アーツ前橋、群馬、2019年）、「VOCA展2018」（上野の森美術館、東京、2018年）「コンニチハ技術トシテノ美術」（せんだいメディアテーク、宮城、2017年）など。", en:`Miki Momma was born in 1981 in Souma-city, Fukushima and graduated from Tokyo Zokei University in 2005. She studied at China Academy of Art and Central Academy of Fine Arts in 2006-2007, afterwards travelled through the China continent while producing works and returned to Japan. In 2013, she resumed painting, which she had ceased due to The Great East Japan Earthquake. Since then, she has traveled more than 100 times between Tokyo and Souma, where no trains ran until the JR Joban Line reopened in 2020, and has been drowinghas drawn the “Route“ series which depicts the scenery mainly of the coastal areas of Fukushima Prefecture. “Route 93month Soma/Oota City” was awarded a Grand Prize in the ACRYL GOUACHE BIENNALE 2018. Recent selected exhibitions: “The Ongoing Dialogue” (Yokohama Civic Art Gallery, Kanagawa, 2019), “Art Meets 06 MOMMA Miki/yang02” (Arts Maebashi, Gunma, 2019), “VOCA2018” (The Ueno Royal Museum, Tokyo, 2018), “Nice to meet you Artechnik.” (sendai mediatheque, Miyagi, 2018).`},
-            caption2: { id:"a6c2", ja:`Untitled No.7`, en:`Untitled No.7`},
+            caption2: { id:"a6c2", 
+            ja:`品川火力発電所、2019年、 アクリル、板
+            画材協力：ターナー色彩株式会社
+            協力：福島県立相馬高等学`, 
+            en:`Shinagawa Thermal Power Plant, 2019, Acrylic on panel`},
         },
         statement: "none"
     },
@@ -228,8 +232,10 @@ Photo by  Pat Verbruggen
             en: `Stars and Stripes(US flag), 2021, Oil on canvas, 291ｘ218.2ｘ5.3㎝` },
             div_description: {id:"a10d1", ja:`1986年岐阜県出身、2012年愛知県立芸術大学大学院 美術研究科 油画版画領域修了。消費され捨てられる物に光を当て、それを描く「最初の物体」シリーズ（2012〜）や、ネオンをモチーフに、ガラス管や背後に存在する配電線、フレームまで克明に描く「ネオン」シリーズ（2016〜）など、物を見て描くという行為を通し、私達や物に与えられた役割や制度を再考する。主な個展に「誰もいない」 (KENJI TAKI GALLERY 、2020年)、「アペルト10  横山奈美   LOVEと私のメモリーズ」 (金沢21世紀美術館、2019年）、主なグループ展に「開館25周年記念コレクション展　VISION Part 1 光について / 光をともして」 （豊田市美術館、2020年）、「日産アートアワード 2017 」（BankART Studio NYK 2F、2017年）などがある。`, en:`Born in 1986, Gifu, Japan. Completed Oil Painting and Printmaking Course at the Aichi Prefectural University of Fine Arts and Music in 2012. Through the act of observing and drawing objects, she reconsiders the roles and systems given to us and objects. Her works include the "First Object" series (2012-), in which she shines the light on objects that are consumed and discarded, and the "Neon" series (2016-), in which she uses neon lights as a motif to clearly depict the glass tubes, power distribution lines behind them, and even the frames. Nami has held several solo exhibitions. Her major solo exhibitions include "Nobody" (Kenji Ishii Gallery, 2020), "Aperto 10: Nami Yokoyama's Memories of LOVE and Me" (21st Century Museum of Contemporary Art, Kanazawa, 2019), and her major group exhibitions include "The 25th Anniversary Collection Exhibition VISION Part 1: About Light / Let There Be Light" (Toyota Municipal Museum of Art, 2020), "The City of Toyota" (Toyota Municipal Museum of Art, 2020), and "The City of Toyota" (Toyota Municipal Museum of Art, 2020). (21st Century Museum of Contemporary Art, Kanazawa, 2019), and "Nissan Art Award 2017" (BankART Studio NYK 2F, 2017).`},
             caption2: { id:"a10c2", 
-            ja:`PAINTING, PAINTING、2020年、油画`, 
-            en:`Photo by Hayato Wakabayashi`},
+            ja:`PAINTING、2020年、油画
+            Photo by Hayato Wakabayashi`, 
+            en:`PAINTING, 2020, Oil on canvas
+            Photo by Hayato Wakabayashi`},
         },
         statement: "none"
     },
