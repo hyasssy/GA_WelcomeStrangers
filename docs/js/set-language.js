@@ -5,23 +5,23 @@ var defaultLang = (window.navigator.languages && window.navigator.languages[0]) 
 
 var currentLang;
 $(document).ready(function () {
-        currentLang = defaultLang;
-        //あとでボタンで切り替えできるようにする。
-        var cookie_lang = $.cookie('lang');
-        if (cookie_lang) {
-            currentLang = cookie_lang;
-        }
-        //ローカルでは確認できなかった。サーバー上げたら確認できる。
-        console.log("読み込み時のcookie : " + document.cookie);
-        setlang();
-        $('#ja-button').on('click', function () {
-            button_ja();
-            return false;
-        });
-        $('#en-button').on('click', function () {
-            button_en();
-            return false;
-        });
+    currentLang = defaultLang;
+    //あとでボタンで切り替えできるようにする。
+    var cookie_lang = $.cookie('lang');
+    if (cookie_lang) {
+        currentLang = cookie_lang;
+    }
+    //ローカルでは確認できなかった。サーバー上げたら確認できる。
+    console.log("読み込み時のcookie : " + document.cookie);
+    setlang();
+    $('#ja-button').on('click', function () {
+        button_ja();
+        return false;
+    });
+    $('#en-button').on('click', function () {
+        button_en();
+        return false;
+    });
 });
 
 const _topdata = {
@@ -78,37 +78,38 @@ const _topdata = {
         Fax: 03-6846-8685
         E-mail: ga-exhibition@ml.geidai.ac.jp (陳列館企画室)`,
         en: `Organized by Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts
-        Co-organized by Culture Vision Japan Foundation Inc.
-        Subsidised by Geidai Friends
-        Supported by KENJI TAKI GALLERY, TURNER COLOUR WORKS
-        Supervisor: Yuko Hasegawa (Professor, Graduate School of Tokyo University of the Arts and Artistic Director, Museum of Contemporary Art, Tokyo)
-        Co-curators: Kawthar Alzaid, Fang Yang, Ekaterina Kuzmina, Riho Matsue, Keisuke, Nakaya, Ness Roque, Saya Fukushi, Toshio Watanabe, Kent Nakamoto
-        Main Visual: Yuchen Cao
-        Web Designer: Yuto Hayashi
+Co-organized by Culture Vision Japan Foundation Inc.
+Subsidised by Geidai Friends
+Supported by KENJI TAKI GALLERY, TURNER COLOUR WORKS
+Supervisor: Yuko Hasegawa (Professor, Graduate School of Tokyo University of the Arts and Artistic Director, Museum of Contemporary Art, Tokyo)
+Co-curators: Kawthar Alzaid, Fang Yang, Ekaterina Kuzmina, Riho Matsue, Keisuke, Nakaya, Ness Roque, Saya Fukushi, Toshio Watanabe, Kent Nakamoto
+Main Visual: Yuchen Cao
+Web Designer: Yuto Hayashi
 
-        Public Relations Contact：
+Public Relations Contact：
 
-        Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, Faculty Room, 12-8 Ueno Koen, Taito-ku, Tokyo 110-8714, Japan
+Department of Arts Studies and Curatorial Practices, Graduate School of Global Arts, Tokyo University of the Arts, Faculty Room, 12-8 Ueno Koen, Taito-ku, Tokyo 110-8714, Japan
 
-        Tel: 050-5525-2725 （Atsuhiro Miyake）
-        Fax: 03-6846-8685
-        E-mail: ga-exhibition@ml.geidai.ac.jp`
+
+Tel: 050-5525-2725 （Atsuhiro Miyake）
+Fax: 03-6846-8685
+E-mail: ga-exhibition@ml.geidai.ac.jp`
     },
 }
 
 
 function setlang() {
     console.log("translate" + currentLang);
-    if(currentLang == "ja"){
+    if (currentLang == "ja") {
         $('#ja-button').css('display', 'none');
         $('#en-button').css('display', 'block');
-        $('#researve-ja').css('display', 'block');
-        $('#researve-en').css('display', 'none');
-    }else{
+        $('#reserve-ja').css('display', 'block');
+        $('#reserve-en').css('display', 'none');
+    } else {
         $('#ja-button').css('display', 'block');
         $('#en-button').css('display', 'none');
-        $('#researve-ja').css('display', 'none');
-        $('#researve-en').css('display', 'block');
+        $('#reserve-ja').css('display', 'none');
+        $('#reserve-en').css('display', 'block');
     }
     Object.keys(_topdata).forEach(function (key) {
         var target = document.getElementById(key);
@@ -116,7 +117,7 @@ function setlang() {
             target.innerHTML = ht_str(currentLang == "ja" ? _topdata[key].ja : _topdata[key].en);
         }
     });
-    
+
     $.cookie('lang', currentLang);
     console.log("cookie : " + document.cookie);
 }
