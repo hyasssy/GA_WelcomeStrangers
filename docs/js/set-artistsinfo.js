@@ -1,26 +1,4 @@
-// $(document).ready(function () {
-//     artist_thumbnail("thumbnail-target");
-//     artist_modalwindow("modal-target");
-//     artist_setlang();
-//     $('.js-modal-open').each(function () {
-//         $(this).on('click', function () {
-//             var target = $(this).data('target');
-//             var modal = document.getElementById(target);
-//             $(modal).fadeIn();
-//             return false;
-//         });
-//     });
-
-//     $('.modal-bg').on('click', function () {
-//         $('.modal').fadeOut();
-//         return false;
-//     });
-//     for (let i = 0; i < _artistdata.length; i++) {
-//         artist_modalcontent(_artistdata[i]);
-//     }
-//     artist_setlang();
-// });
-function artistpage() {
+$(document).ready(function () {
     artist_thumbnail("thumbnail-target");
     artist_modalwindow("modal-target");
     artist_setlang();
@@ -32,11 +10,13 @@ function artistpage() {
             return false;
         });
     });
-
+    
     $('.modal-bg').on('click', function () {
         $('.modal').fadeOut();
         return false;
     });
+});
+function artistpage() {
     for (let i = 0; i < _artistdata.length; i++) {
         artist_modalcontent(_artistdata[i]);
     }
