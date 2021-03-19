@@ -79,7 +79,7 @@ html {
   color: var(--baseblack);
   background-color: var(--basebeige);
   font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
-  font-weight: 100;
+  font-weight: 400;
   letter-spacing: 0.1rem;
   scroll-behavior: smooth;
   visibility: hidden;

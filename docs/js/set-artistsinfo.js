@@ -10,7 +10,7 @@ $(document).ready(function () {
             return false;
         });
     });
-    
+
     $('.modal-bg').on('click', function () {
         $('.modal').fadeOut();
         return false;
