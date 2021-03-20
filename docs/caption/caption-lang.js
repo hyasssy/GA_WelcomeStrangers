@@ -182,19 +182,19 @@ const _captiondata = [
                 12. 品川火力発電所、2019、アクリル、板
                 13. 原町火力発電所 2021、2021、アクリル、板
                 14. 相馬共同火力発電新地発電所 2021、2021、アクリル、板`,
-                en: `10. Route 120ヶ月、布、インスタレーション
-                11. 横浜火力発電所、2019、アクリル、板
-                12. 品川火力発電所、2019、アクリル、板
-                13. 原町火力発電所 2021、2021、アクリル、板
-                14. 相馬共同火力発電新地発電所 2021、2021、アクリル、板`
+                en: `10. Route 120 months, 2019, cloth, installation
+                11. Yokohama Thermal Power Plant, 2019, acrylic on panel
+                12. Shinagawa Thermal Power Plant, 2019, acrylic on panel
+                13. Haramachi Thermal Power Plant 2021, 2021, acrylic on panel
+                14. Shinchi Power Station 2021, 2021, acrylic on panel`
             },
             {
                 id: "artist7_info",
                 class: "artist-info",
-                ja: `「Route」協力：福島県立相馬高等学校
+                ja: `「Route 120ヶ月」協力：福島県立相馬高等学校
                 「相馬共同火力発電新地発電所 2021」画材協力：ターナー色彩株式会社`,
-                en: `"Route" Supported by: Fukushima Prefectural Soma High School
-                あああああああああ`
+                en: `“Route 120 months” Supported by: Fukushima Prefectural Soma High School
+                “Shinchi Power Station 2021” Supported by: TURNER COLOUR WORKS`
             },
             {
                 id: "artist7_description",
@@ -204,7 +204,7 @@ const _captiondata = [
                 Her works can tell not only the fact that those landscapes do indeed exist somewhere in this world, but also widen people's imagination, to envision the route and the time flowing there while looking at the paintings.`
             }
         ],
-        statement: { href: "./data/kaoru_statement.pdf", id: "artist7_statement" }
+        statement: { href: "./data/statement_momma.pdf", id: "artist7_statement" }
     },
     {
         id: "artist8",
@@ -221,9 +221,9 @@ const _captiondata = [
                 ja: `15. 　閃光と落下傘、2020、古布、古道具、山下清の複製画【『山下清:作品集』(ダイレクトネットワーク、1999年)より1点、その他1点】とペン画模写、インスタレーション
                 16.  青森、八甲田山の花火、2020、２チャンネルビデオ
                 17.   東京、江戸川の花火、2021、ビデオ`,
-                en: `15. 　閃光と落下傘、2020、古布、古道具、山下清の複製画【『山下清:作品集』(ダイレクトネットワーク、1999年)より1点、その他1点】とペン画模写、インスタレーション
-                16.  青森、八甲田山の花火、2020、２チャンネルビデオ
-                17.   東京、江戸川の花火、2021、ビデオ`
+                en: `15. Flash and Parachute, 2020, old clothes, old equipments, 2 prints (1 print from “Yamashita Kiyoshi: Collection of works'' and 1 other print) and an ink drawing of Yamashita Kiyoshi’s artwork, installation
+                16. Fireworks, Hakkouda Mountain, Aomori, 2020, 2-channel video
+                17. Fireworks, Edo River, Tokyo, 2021, video`
             },
             {
                 id: "artist8_info",
@@ -231,7 +231,9 @@ const _captiondata = [
                 ja: `「閃光と落下傘」協力：慶野 結香(青森公立大学 国際芸術センター青森[ACAC] 学芸員)
                 「青森、八甲田山の花火」撮影・編集：横山昌典 (YOKOYAMA DESIGN WORKS)
                 「東京、江戸の花火」撮影協力：大山日歩`,
-                en: `ああああああああああああ`
+                en: `“Flash and Parachute” Supported by: Yuka Keino (Aomori Contemporary Art Centre[ACAC] Curator)
+                “Fireworks, Hakkouda Mountain, Aomori”　Film and edit by: Yasunori Yokoyama (YOKOYAMA DESIGN WORKS)
+                “Fireworks, Edo River” Supported by: Nichiho Ooyama`
             },
             {
                 id: "artist8_description",
@@ -240,7 +242,7 @@ const _captiondata = [
                 en: `Endo Kaori understands and rethinks the complicated relationship between "society" and ”craft” through her research in various places and the production of artworks. "Flash and Parachute" is an installation themed around war and fireworks was inspired by the remarks of the painter Kiyoshi Yamashita, who is said to have started his wandering life to escape from the draft during World War II. Since this work was exhibited in Aomori Contemporary Art Center last year, Aomori and Tokyo, the two places, which were connected by the historical event of the war intertwined in an echo across time and space. `
             }
         ],
-        statement: { href: "./data/kaoru_statement.pdf", id: "artist8_statement" }
+        statement: { href: "./data/statement_endo.pdf", id: "artist8_statement" }
     },
     {
         id: "artist9",
@@ -256,14 +258,14 @@ const _captiondata = [
                 class: "artist-title",
                 ja: `18.  版画作品と原版、「すべての女性を讃える心からの表現」シリーズより、2019-2020、木版、ゴム版、リノリウム版、木材、ゴム、リノリウムブロック
                 19. 多目的フード・カート（絵：アーティストによる図案化、カート：母親や生徒たちと一緒に神戸アジアン食堂SALAのためにつくられた）、2019-2020`,
-                en: `18.  版画作品と原版、「すべての女性を讃える心からの表現」シリーズより、2019-2020、木版、ゴム版、リノリウム版、木材、ゴム、リノリウムブロック
-                19. 多目的フード・カート（絵：アーティストによる図案化、カート：母親や生徒たちと一緒に神戸アジアン食堂SALAのためにつくられた）、2019-2020`
+                en: `18. Various prints and matrixes from the series “simpleng ekspresyon ng pagpupugay sa lahatng kababaihan (a simple expression honoring all women),” 2019-2020, woodcut, rubbercut, linocut; wood, rubber, and linoleum blocks
+                19. Multi-purpose food cart, painted design conceptualized by the artist, co-created with mothers and students for Asian Shokudo Sala, 2019-2020`
             },
             {
                 id: "artist9_info",
                 class: "artist-info",
                 ja: `協力：神戸アジアン食堂バル SALA`,
-                en: `あああああああああああ`
+                en: `“Multi-purpose food cart” Supported by: Kobe Asian Shokudo Bar SALA`
             },
             {
                 id: "artist9_description",
@@ -288,8 +290,8 @@ const _captiondata = [
             {
                 id: "artist10_title",
                 class: "artist-title",
-                ja: `20.   Untitled(No.1~No,10)、2018、トレーシングペーパー、木枠`,
-                en: `20.   Untitled(No.1~No,10)、2018、トレーシングペーパー、木枠`
+                ja: `20. Untitled(No.1~No,10)、2018、トレーシングペーパー、木枠`,
+                en: `20. Untitled(No.1~No,10)2018, Tracings on Paper, wood`
             },
             {
                 id: "artist10_description",
@@ -321,6 +323,10 @@ $(function () {
     }
     //ローカルでは確認できなかった。サーバー上げたら確認できる。
     console.log("読み込み時のcookie : " + document.cookie);
+    if (currentLang != "ja") {
+        $('#en-button').fadeOut();
+        $('#ja-button').fadeIn();
+    }
     setlang();
     $('#ja-button').on('click', function () {
         $('#ja-button').fadeOut();

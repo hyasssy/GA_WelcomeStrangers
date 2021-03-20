@@ -1,5 +1,6 @@
 body{
-    scroll-behavior: smooth;
+    scroll-behavior:inherit;
+    /* -webkit-overflow-scrolling: touch; */
     text-align: center;
     color: var(--titleblack);
     font-weight: 400;
@@ -31,6 +32,22 @@ button{
 #en-button{
     display: block;
 }
+#topbutton{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    width: 15rem;
+    height: 4rem;
+}
+#topbutton a{
+    font-size: 2.4rem;
+    position: absolute;
+    color: var(--titleblack);
+    bottom: 1rem;
+    right: 1rem;
+    transform: scale(0.95, 1);
+}
 
 #contents-wrapper{
     width: 95%;
@@ -44,6 +61,28 @@ button{
     /* background-color: yellow; */
     transform: scale(0.95, 1);
 }
+#index{
+    margin-top: 5rem;
+    width: 95%;
+    max-width: 65rem;
+    display: inline-block;
+    height: auto;
+    text-align: left;
+    transform: scale(0.95, 1);
+    padding-bottom: 1.6rem;
+    border-bottom: solid 1px var(--baseblack);
+}
+#index span{
+    display: block;
+    font-size: 1.4rem;
+    margin-bottom: 2.6rem;
+}
+#index a{
+    display: block;
+    color: rgb(40, 54, 160);
+    font-size: 1.15rem;
+    margin-bottom: 1.2rem;
+}
 
 .artistinfo-root{
     /* background-color: red; */
@@ -54,12 +93,12 @@ button{
     font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
     font-weight: 500;
     letter-spacing: 0rem;
-    font-size: 3.4vw;
-    line-height: 5.6vw;
+    font-size: 1.1rem;
+    line-height: 1.9rem;
 }
 .artist-name{
-    font-size: 5vw;
-    line-height: 6vw;
+    font-size: 1.6rem;
+    line-height: 1.8rem;
     margin-bottom: 4rem;
     margin-top: 7rem;
     padding-top: 1rem;
@@ -67,8 +106,8 @@ button{
 .artist-title{
     margin-bottom: 3rem;
     font-style: oblique;
-    font-size: 3.8vw;
-    line-height: 5.2vw;
+    font-size: 1.3rem;
+    line-height: 1.7rem;
 }
 .artist-info{
     text-align: right;
@@ -83,6 +122,10 @@ button{
     margin-top: 4rem;
     margin-bottom: 3rem;
     text-align: justify;
+}
+#sitelink{
+    margin: 12rem 0;
+    text-align: center;
 }
 
 #copyright{

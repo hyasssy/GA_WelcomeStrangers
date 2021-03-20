@@ -28,7 +28,7 @@ let _artistdata = [
         img_portrait: "./imgs/artists/portrait/endo.jpg",
         img_work: ["./imgs/artists/work/endo1.jpg", "./imgs/artists/work/endo2.jpg"],
         text: {
-            name: { id: "a1name", ja: "遠藤薫", en: "Kaoru Endo" },
+            name: { id: "a1name", ja: "遠藤薫", en: "Kaori Endo" },
             caption1: {
                 id: "a1c1",
                 ja: `「閃光と落下傘」 、2020、布、古道具、インスタレーション
