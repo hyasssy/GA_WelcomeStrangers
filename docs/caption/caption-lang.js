@@ -204,7 +204,7 @@ const _captiondata = [
                 Her works can tell not only the fact that those landscapes do indeed exist somewhere in this world, but also widen people's imagination, to envision the route and the time flowing there while looking at the paintings.`
             }
         ],
-        statement: { href: "./data/statement_momma.pdf", id: "artist7_statement" }
+        statement: { href: "./data/statement_momma.pdf", id: "artist7_statement", ja:"STATEMENT 《Route 120ヶ月》", en:"STATEMENT 《Route 120 months》" }
     },
     {
         id: "artist8",
@@ -242,7 +242,11 @@ const _captiondata = [
                 en: `Endo Kaori understands and rethinks the complicated relationship between "society" and ”craft” through her research in various places and the production of artworks. "Flash and Parachute" is an installation themed around war and fireworks was inspired by the remarks of the painter Kiyoshi Yamashita, who is said to have started his wandering life to escape from the draft during World War II. Since this work was exhibited in Aomori Contemporary Art Center last year, Aomori and Tokyo, the two places, which were connected by the historical event of the war intertwined in an echo across time and space. `
             }
         ],
-        statement: { href: "./data/statement_endo.pdf", id: "artist8_statement" }
+        statement: { href: "./data/statement_endo.pdf", id: "artist8_statement", 
+        ja:`STATEMENT
+        (展覧会『いのちの裂け目ー布が描き出す近代、青森から』青森公立大学国際芸術センター青森 [ACAC]/ カタログより抜粋)`, 
+        en:`STATEMENT
+        From the catalog of  The Beginning of Life/Art: Cloth Weaves Our Times, from Aomori (Aomori Contemporary Art Centre [ACAC])`}
     },
     {
         id: "artist9",
@@ -349,6 +353,9 @@ function setlang() {
         for (var textlength = 0; textlength < _captiondata[i].text.length; textlength++) {
             document.getElementById(_captiondata[i].text[textlength].id).innerHTML = ht_str(currentLang == "ja" ? _captiondata[i].text[textlength].ja : _captiondata[i].text[textlength].en);
         }
+        if(_captiondata[i].statement != "none"){
+            document.getElementById(_captiondata[i].statement.id).innerHTML = ht_str(currentLang == "ja" ? _captiondata[i].statement.ja : _captiondata[i].statement.en);
+        }
     }
 }
 function button_ja() {
@@ -376,6 +383,7 @@ function artistinfo(num) {
     if (statementdata != "none") {
         var a = document.createElement("a");
         a.href = statementdata.href;
+        a.id = statementdata.id;
         a.textContent = "STATEMENT";
         a.target = "_blank";
         root.appendChild(a);
