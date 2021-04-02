@@ -95,6 +95,15 @@ Tel: 050-5525-2725 （Atsuhiro Miyake）
 Fax: 03-6846-8685
 E-mail: ga-exhibition@ml.geidai.ac.jp`
     },
+
+    onlineview1: {
+        ja: `今すぐ展示を見ることができます。`,
+        en: `You can see the show right now.`
+    },
+    onlineview2: {
+        ja: `撮影・制作：林裕人`,
+        en: `Made by Yuto Hayashi`
+    },
 }
 
 

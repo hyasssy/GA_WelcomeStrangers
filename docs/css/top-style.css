@@ -557,6 +557,16 @@ h1 span {
 .modal-space {
   height: 6rem;
 }
+.onlineview-box{
+  /* background-color: red; */
+  width: 98vw;
+  height: auto;
+  margin-left: calc(50% - 49vw);
+  /* height: 10rem; */
+}
+.onlineview-box a img{
+  width: 100%;
+}
 
 #logo-box {
   width: 100%;
