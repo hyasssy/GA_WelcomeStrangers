@@ -90,7 +90,9 @@ const _captiondata = [
                 en: `Yusuke Kamata works across the boundaries of architecture and art. In his view, architectural practices not only reflect the history and social conditions but also form national identity and culture. Among his works, "The House" project delves into several contemporaneous social conditions through an investigation of the historical background of Japanese-style houses. The installation reconstructed for this exhibition will present the diverse contexts behind the wooden structures to visitors as artistic expression.`
             }
         ],
-        statement: "none"
+        statement: {
+            href: "./data/statement_kamata.pdf?date=210406", id: "artist3_statement", ja: "STATEMENT", en: "STATEMENT"
+        }
     },
     {
         id: "artist4",
@@ -163,7 +165,9 @@ const _captiondata = [
                 en: `Charwei Tsai was born in Taipei (1980) and currently lives and works in Taipei. Her childhood experience of reading Buddhist classics imbued her artistic creation from the very beginning. The constant meditation on the complexities of cultural beliefs, spirituality, and transience empowered her work with compassion and spiritual reflections. In “Songs of Chuchepati Camp, Nepal”, the songs of the earthquake victims in Kathmandu are either traditional Nepali folk songs or improvisations based on their life stories. The intangible emotion thus is given form by the lyrics and the fugitive experience is shared through introspective human desire.`
             }
         ],
-        statement: "none"
+        statement: {
+            href: "./data/statement_tsai.pdf?date=210406", id: "artist6_statement", ja: "作品中歌詞和訳", en: "Lirycs"
+        }
     },
     {
         id: "artist7",
@@ -182,19 +186,21 @@ const _captiondata = [
                 12. 品川火力発電所、2019、アクリル、板
                 13. 原町火力発電所 2021、2021、アクリル、板
                 14. 相馬共同火力発電新地発電所 2021、2021、アクリル、板`,
+
                 en: `10. Route 120 months, 2019, cloth, installation
                 11. Yokohama Thermal Power Plant, 2019, acrylic on panel
                 12. Shinagawa Thermal Power Plant, 2019, acrylic on panel
                 13. Haramachi Thermal Power Plant 2021, 2021, acrylic on panel
                 14. Shinchi Power Station 2021, 2021, acrylic on panel`
+
             },
             {
                 id: "artist7_info",
                 class: "artist-info",
-                ja: `「Route 120ヶ月」協力：福島県立相馬高等学校
-                「相馬共同火力発電新地発電所 2021」画材協力：ターナー色彩株式会社`,
-                en: `“Route 120 months” Supported by: Fukushima Prefectural Soma High School
-                “Shinchi Power Station 2021” Supported by: TURNER COLOUR WORKS`
+                ja: `協力：福島県立相馬高等学校
+                画材協力：ターナー色彩株式会社`,
+                en: `Supported by: Fukushima Prefectural Soma High School
+                Supported by: TURNER COLOUR WORKS`
             },
             {
                 id: "artist7_description",
@@ -204,7 +210,7 @@ const _captiondata = [
                 Her works can tell not only the fact that those landscapes do indeed exist somewhere in this world, but also widen people's imagination, to envision the route and the time flowing there while looking at the paintings.`
             }
         ],
-        statement: { href: "./data/statement_momma.pdf", id: "artist7_statement", ja: "STATEMENT 《Route 120ヶ月》", en: "STATEMENT 《Route 120 months》" }
+        statement: { href: "./data/statement_momma.pdf?date=210406", id: "artist7_statement", ja: "STATEMENT 《Route 120ヶ月》", en: "STATEMENT 《Route 120 months》" }
     },
     {
         id: "artist8",
@@ -243,7 +249,7 @@ const _captiondata = [
             }
         ],
         statement: {
-            href: "./data/statement_endo.pdf", id: "artist8_statement",
+            href: "./data/statement_endo.pdf?date=210406", id: "artist8_statement",
             ja: `STATEMENT
         (展覧会『いのちの裂け目ー布が描き出す近代、青森から』青森公立大学国際芸術センター青森 [ACAC]/ カタログより抜粋)`,
             en: `STATEMENT

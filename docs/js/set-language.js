@@ -101,8 +101,10 @@ E-mail: ga-exhibition@ml.geidai.ac.jp`
         en: `You can see the show right now!`
     },
     onlineview2: {
-        ja: `撮影・制作：林裕人`,
-        en: `Made by Yuto Hayashi`
+        ja: `写真撮影：松尾宇人
+        3Dキャプチャー・バーチャルツアー作成：林裕人`,
+        en: `Still pictures taken by Ujin Matsuo
+        3D capture and virtual tour made by Yuto Hayashi`
     },
 }
 
