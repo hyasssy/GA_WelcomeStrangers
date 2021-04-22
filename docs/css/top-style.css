@@ -355,6 +355,27 @@ body {
   font-weight: 400;
   /* box-shadow: 0 0 3rem 3rem var(--bgcolor-base); */
 }
+#text_endshow {
+  margin-top: 8rem;
+  margin-bottom: 3rem;
+}
+.video-container {
+  width: 100%;
+  padding-bottom: 15%;
+}
+.video {
+  position: relative;
+  height: 0;
+  padding: 30px 0 56.25%;
+  overflow: hidden;
+}
+.video iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
 h1 {
   font-family: "HelveticaNeue", sans-serif;
   font-weight: 200;
@@ -557,14 +578,14 @@ h1 span {
 .modal-space {
   height: 6rem;
 }
-.onlineview-box{
+.onlineview-box {
   /* background-color: red; */
   width: 98vw;
   height: auto;
   margin-left: calc(50% - 49vw);
   /* height: 10rem; */
 }
-.onlineview-box a img{
+.onlineview-box a img {
   width: 100%;
 }
 

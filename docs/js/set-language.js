@@ -25,6 +25,12 @@ $(document).ready(function () {
 });
 
 const _topdata = {
+    text_endshow:{
+        ja:`＊本展は終了しました。
+        本ページはアーカイブとして引き続き閲覧可能です。`,
+        en:`＊This exhibition has ended.
+        This page is still available as an archive content.`
+    },
     text_about: {
         ja: `私たちが「見知らぬもの（=stranger）」と見做すもの、それは一体なんでしょうか。
         初めて出会うものや知らなかったことに対する認識とするならば、今日私たちの前に現れた未知のウイルスもまた、その一つかもしれません。ウイルスは、私たちの慣れ親しんだ環境を一変させました。そうした状況に戸惑う我々も「不慣れな人（=stranger）」と言えるでしょう。
