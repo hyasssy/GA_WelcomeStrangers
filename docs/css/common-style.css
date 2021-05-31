@@ -2,133 +2,118 @@
 
 @font-face {
   font-family: "HelveticaNeue";
-  src: url(../fonts/HelveticaNeue-Thin.ttf);
+  src        : url(../fonts/HelveticaNeue-Thin.ttf);
   font-weight: 200;
 }
+
 @font-face {
   font-family: "HelveticaNeue";
-  src: url(../fonts/HelveticaNeue.ttf);
+  src        : url(../fonts/HelveticaNeue.ttf);
   font-weight: 400;
 }
-/* @font-face {
-  font-family: "TimesNR";
-  src: url(../fonts/TimesNewRomanItalic.ttf);
-  font-weight: 300;
-  font-style: italic;
-} */
+
 @font-face {
   font-family: "Moon";
-  src: url(../fonts/Moon2.0-Light.otf);
+  src        : url(../fonts/Moon2.0-Light.otf);
 }
+
 @font-face {
   font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W1_subset.otf);
+  src        : url(../fonts/HiraKakuGo_W1_subset.otf);
   font-weight: 100;
 }
-/*
+
 @font-face {
-  font-family: "HiraKakuGo";
-  src: url(../fonts/HiraKakuGo_W3.ttc);
-  font-weight: 300;
-} */
-/* @font-face {
-  font-family: "Yumin";
-  src: url(../fonts/Yumin_Light_subset.ttf);
-  font-weight: 300;
-} */
-/* @font-face {
-  font-family: "KozGo";
-  src: url(../fonts/KozGo-Bold.otf);
-  font-weight: 700;
-} */
-/* @font-face {
-  font-family: "KozGo";
-  src: url(../fonts/KozGo-Medium.otf);
-  font-weight: 500;
-} */
-/* @font-face {
-  font-family: "KozGo";
-  src: url(../fonts/KozGo-Regular.otf);
+  font-family: "ChuGo";
+  src        : url(../fonts/ChuGo_subset.woff);
   font-weight: 400;
-} */
+}
+
 /*adobeフォント参考
 a-otf-gothic-bbb-pr6n : 400
 */
 
 :root {
   /* カラースキームを作る 探り中。*/
-  --titleblack: rgb(0, 0, 14);
-  --baseblack: rgb(84, 89, 90);
-  --neutralgray: rgb(140, 140, 140);
-  --basewhite: rgb(235, 241, 249);
-  --baselink: rgb(66, 115, 223);
-  --basehover: rgb(143, 183, 193);
-  --basebeige: rgb(245, 224, 194);
-  --lemonyellow: rgb(12, 12, 12);
-  --bgcolor: rgb(96, 93, 86);
-  --bgcolor-base: rgba(154, 147, 132, 0);
+  --titleblack    : rgb(0, 0, 14);
+  --baseblack     : rgb(84, 89, 90);
+  --neutralgray   : rgb(140, 140, 140);
+  --basewhite     : rgb(235, 241, 249);
+  --baselink      : rgb(66, 115, 223);
+  --basehover     : rgb(143, 183, 193);
+  --basebeige     : rgb(245, 224, 194);
+  --lemonyellow   : rgb(12, 12, 12);
+  --bgcolor       : rgb(96, 93, 86);
+  --bgcolor-base  : rgba(154, 147, 132, 0);
   --bgcolor-online: #b3768f;
 }
+
 body,
 html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  font-size: 10px;
-  color: var(--baseblack);
+  margin          : 0;
+  padding         : 0;
+  height          : 100%;
+  width           : 100%;
+  font-size       : 10px;
+  color           : var(--baseblack);
   background-color: var(--basebeige);
-  font-family: "HelveticaNeue", a-otf-gothic-bbb-pr6n, sans-serif; /*ニュートラル*/
-  font-weight: 400;
-  letter-spacing: 0.1rem;
-  scroll-behavior: smooth;
-  visibility: hidden;
+  font-family     : "HelveticaNeue", "ChuGo", sans-serif;
+  /*ニュートラル*/
+  font-weight     : 400;
+  letter-spacing  : 0.1rem;
+  scroll-behavior : smooth;
+  visibility      : hidden;
 }
+
 html {
   background-color: var(--basebeige);
 }
+
 ::-webkit-scrollbar {
-  width: 0;
+  width           : 0;
   background-color: var(--bgcolor);
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--titleblack);
+  background   : var(--titleblack);
   border-radius: 1rem;
 }
 
 /*カラースキームは調整*/
 a {
   text-decoration: none;
-  transition: 0.3s;
-  color: var(--baselink);
-  /* cursor: url(../imgs/icon/pointer.png), pointer; */
+  transition     : 0.3s;
+  color          : var(--baselink);
+  /* cursor      : url(../imgs/icon/pointer.png), pointer; */
 }
+
 a:link,
 a:visited {
   color: var(--baselink);
 }
+
 a:hover,
 a:active {
-  color: var(--basehover);
+  color    : var(--basehover);
   transform: scale(1.1, 1.1);
-  opacity: 0.8;
-  filter: drop-shadow(0 0.3rem 0.7rem var(--titleblack));
+  opacity  : 0.8;
+  filter   : drop-shadow(0 0.3rem 0.7rem var(--titleblack));
 }
 
 #copyright {
   /* background-color: red; */
-  padding-top: 7rem;
+  padding-top   : 7rem;
   padding-bottom: 7rem;
-  width: 80%;
-  margin-left: 10%;
-  text-align: center;
-  font-family: "HelveticaNeue", sans-serif;
-  font-size: 1rem;
+  width         : 80%;
+  margin-left   : 10%;
+  text-align    : center;
+  font-family   : "HelveticaNeue", sans-serif;
+  font-size     : 1rem;
   letter-spacing: 1px;
-  font-weight: 300;
-  color: var(--basewhite);
-  z-index: 99;
-  border-top: solid 1px var(--basewhite);
+  font-weight   : 300;
+  color         : var(--basewhite);
+  z-index       : 99;
+  border-top    : solid 1px var(--basewhite);
 }
 
 /* .portrait{
@@ -146,11 +131,13 @@ a:active {
   }
 } */
 @media screen and (min-width: 480px) {
+
   /*スマホより大きい*/
   #copyright {
     font-size: 1.2rem;
   }
 }
+
 @media screen and (min-width: 896px) {
   /*タブレットより大きい*/
 }
